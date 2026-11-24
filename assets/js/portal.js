@@ -228,7 +228,7 @@
 
     if (els.searchResultsBox) els.searchResultsBox.classList.add('active');
     if (els.searchMeta) {
-      els.searchMeta.innerHTML = `搜尋「<strong>${escapeHtml(q)}</strong>」共找到 <strong>${matches.length}</strong> 筆精準知識節點`;
+      els.searchMeta.innerHTML = `<span>搜尋「<strong>${escapeHtml(q)}</strong>」共找到 <strong>${matches.length}</strong> 筆精準知識節點</span><span style="font-size:12px;color:#64748B;">點擊結果卡片直接跳轉至簡報指定頁</span>`;
     }
 
     if (els.searchList) {
