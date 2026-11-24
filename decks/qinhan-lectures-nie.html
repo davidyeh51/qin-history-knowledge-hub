@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《秦漢史講義》秦暉著・聶輝華解讀｜麥肯錫 10 分鐘精華簡報（15 頁）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/deck.css" />
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="deck-topbar">
+    <div class="deck-left">
+      <a href="../index.html" class="btn-back-home">← 返回秦朝歷史知識庫</a>
+      <div class="deck-title-bar">
+        <span>QIN-01</span>《秦漢史講義》秦暉原著 · 聶輝華解讀 · 麥肯錫 10 分鐘導讀簡報
+      </div>
+    </div>
+
+    <div class="deck-controls">
+      <button type="button" class="timer-pill" id="timer-pill" title="點擊開始/暫停 10 分鐘計時（雙擊重置）">⏱ 10:00</button>
+      <span class="slide-counter" id="slide-counter">01 / 15</span>
+      <button type="button" class="ctrl-btn" id="btn-notes" title="快捷鍵 N">講稿 (N)</button>
+      <button type="button" class="ctrl-btn" id="btn-grid" title="快捷鍵 G">總覽/頁內搜尋 (G)</button>
+      <button type="button" class="ctrl-btn" id="btn-fs" title="快捷鍵 F">全螢幕 (F)</button>
+      <button type="button" class="ctrl-btn" id="btn-print" title="列印或匯出 PDF">列印 / PDF</button>
+    </div>
+  </header>
+
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+  <!-- Navigation Arrows -->
+  <button type="button" class="nav-arrow nav-prev" id="btn-prev" aria-label="上一頁">‹</button>
+  <button type="button" class="nav-arrow nav-next" id="btn-next" aria-label="下一頁">›</button>
+
+  <!-- Main 16:9 Scaled Stage -->
+  <main class="stage-wrapper" id="stage-wrapper">
+    <div class="stage-scaler" id="stage-scaler">
+
+      <!-- ================================================================
+           SLIDE 01 : 封面
+           ================================================================ -->
+      <section class="slide slide-cover active"
+        data-kicker="COVER · 麥肯錫 10 分鐘精華導讀"
+        data-title="《秦漢史講義》：從「周秦之變」看懂中國兩千年帝制的底層制度邏輯"
+        data-note-conclusion="這是一場從「歷史政治經濟學」出發的 10 分鐘導讀：用委託-代理理論看懂為什麼周制敗給秦制、秦制為何 15 年速崩，以及後世為何必須「外儒內法」。"
+        data-note-evidence="來源為清華大學社科學院教授聶輝華解讀清華大學歷史系教授秦暉《秦漢史講義》（音訊 28 分 25 秒）。原書脫胎於近十年清華課堂講義，並結合近二十年出土的張家山漢簡、里耶秦簡、睡虎地秦簡大幅修訂增補。"
+        data-note-transition="在進入歷史細節前，我們先用一頁鳥瞰全書的「四部曲邏輯骨架」。">
+        <div class="cover-grid">
+          <div>
+            <div class="cover-tag">QIN HISTORY KNOWLEDGE HUB · QIN-01 · 10 MIN BRIEFING</div>
+            <h1 class="cover-title">秦漢史講義</h1>
+            <p class="cover-subtitle">從「周秦之變」看懂中國兩千年帝制的底層制度邏輯</p>
+            <div class="cover-thesis">
+              秦暉以問題意識驅動的制度史，結合近二十年出土簡牘；聶輝華進一步注入經濟學<strong>「委託-代理理論」</strong>，拆解歷代王朝如何在控制成本與激勵效率間掙扎求存。
+            </div>
+            <div class="cover-four-badges">
+              <div class="cover-badge"><strong>01 代理成本</strong><span>國家競爭本質</span></div>
+              <div class="cover-badge"><strong>02 打包委託</strong><span>西周封建邏輯</span></div>
+              <div class="cover-badge"><strong>03 直管制</strong><span>秦制硬體三招</span></div>
+              <div class="cover-badge"><strong>04 儒表法裡</strong><span>軟體降本與鐘擺</span></div>
+            </div>
+            <div style="margin-top:24px;font-size:12.5px;color:rgba(255,255,255,0.68);display:flex;gap:14px;flex-wrap:wrap;">
+              <span>原著：秦暉（清華大學歷史系）</span>
+              <span>｜</span>
+              <span>解讀：聶輝華（清華大學社科學院，28分25秒）</span>
+              <span>｜</span>
+              <span>簡牘：張家山漢簡・里耶秦簡・睡虎地秦簡</span>
+            </div>
+          </div>
+
+          <div class="cover-book-mockup">
+            <img src="../assets/images/book-qinhan-lectures-cover.jpg" alt="《秦漢史講義》重新繪製典藏封面插畫" />
+            <div class="cover-book-scrim"></div>
+            <div class="cover-book-top">
+              <div style="font-size:11px;letter-spacing:0.22em;color:#E0A84B;border-bottom:1px solid rgba(224,168,75,0.45);padding-bottom:6px;margin-bottom:12px;">POLITICAL ECONOMY OF QIN & HAN</div>
+              <div style="font-family:'Noto Serif TC',serif;font-size:34px;font-weight:700;letter-spacing:0.08em;line-height:1.2;">秦漢史講義</div>
+              <div style="font-size:12.5px;color:rgba(255,255,255,0.84);letter-spacing:0.12em;margin-top:6px;">周秦之變與帝制底層代碼</div>
+            </div>
+            <div class="cover-book-bottom" style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(255,255,255,0.2);padding-top:12px;font-size:12.5px;">
+              <div><strong>秦暉</strong> 著 · <strong>聶輝華</strong> 解讀</div>
+              <div style="color:#E0A84B;font-weight:700;">重繪典藏視覺</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 02 : 全書架構圖 (版型 4：連鎖論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="01 · 全書架構圖（版型 4：連鎖論法）"
+        data-title="全書以「降低統治成本」為主軸，串聯根本難題、周制打包、秦制直管與儒法國家四部曲"
+        data-note-conclusion="「周秦之變」不是一般王朝更替，而是從血緣宗族封建體制向大一統官僚集權體制的根本轉型，整場論證沿著「降低代理成本」四步推進。"
+        data-note-evidence="史學家關注「發生了什麼」，經濟學家關注「為什麼發生」（制度設計、激勵機制與選擇後果）。歷史為經濟學提供了天然的實驗場。"
+        data-note-transition="首先來看第一個根本問題：古代所有國家究竟面臨什麼共同的統治難題？">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">01 · BOOK ARCHITECTURE · 全書邏輯骨架</span>
+            <span class="slide-pacing">建議節奏 00:40–01:20</span>
+          </div>
+          <h2 class="action-title">全書以「降低統治成本」為主軸，串聯<em>難題 → 周制 → 秦制 → 儒法國家</em>四部曲</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="svg-box" style="flex:1;padding:16px;">
+            <svg viewBox="0 0 1140 430" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+              <defs>
+                <marker id="s2-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,1 L9,5 L0,9 z" fill="#C88A2E"/>
+                </marker>
+              </defs>
+
+              <!-- Top Banner: Analytical Lens -->
+              <rect x="20" y="16" width="1100" height="68" rx="10" fill="#0B1F3A"/>
+              <text x="48" y="45" fill="#E0A84B" font-size="13" font-weight="700" letter-spacing="1">底層分析視角：歷史政治經濟學（委託-代理理論）</text>
+              <text x="48" y="69" fill="#FFFFFF" font-size="15.5" font-weight="600">核心追問：為何偏偏秦制勝出？為何短短十五年速崩？為何崩後兩千年仍沿用秦制底層邏輯？</text>
+
+              <!-- 4 Sequential Pillars -->
+              <!-- Step 1 -->
+              <rect x="20" y="114" width="248" height="240" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+              <rect x="20" y="114" width="248" height="46" rx="10" fill="#1E4270"/>
+              <text x="144" y="143" text-anchor="middle" fill="#FFFFFF" font-size="15.5" font-weight="700">一、根本難題 (P03–04)</text>
+              <text x="38" y="190" fill="#0B1F3A" font-size="14.5" font-weight="700">如何降低代理成本？</text>
+              <text x="38" y="218" fill="#475569" font-size="13">• 制度：代理鏈條太長</text>
+              <text x="38" y="242" fill="#475569" font-size="13">• 激勵：道德風險與逆向選擇</text>
+              <text x="38" y="266" fill="#475569" font-size="13">• 技術：信息不通與交通阻隔</text>
+              <rect x="36" y="294" width="216" height="44" rx="6" fill="#FEF7E8" stroke="#E0A84B"/>
+              <text x="144" y="321" text-anchor="middle" fill="#B4771E" font-size="12.5" font-weight="700">戰國持久戰 → 制度決定勝負</text>
+
+              <line x1="274" y1="234" x2="300" y2="234" stroke="#C88A2E" stroke-width="3" marker-end="url(#s2-arr)"/>
+
+              <!-- Step 2 -->
+              <rect x="306" y="114" width="248" height="240" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+              <rect x="306" y="114" width="248" height="46" rx="10" fill="#1E4270"/>
+              <text x="430" y="143" text-anchor="middle" fill="#FFFFFF" font-size="15.5" font-weight="700">二、周制方案 (P05–06)</text>
+              <text x="324" y="190" fill="#0B1F3A" font-size="14.5" font-weight="700">血緣宗族「打包委託」</text>
+              <text x="324" y="218" fill="#475569" font-size="13">• 四支柱：小共同體/孝/權責/鄉舉</text>
+              <text x="324" y="242" fill="#475569" font-size="13">• 經濟：井田公地與熟人社會</text>
+              <text x="324" y="266" fill="#B91C1C" font-size="13" font-weight="600">• 弱點：戰時動員低、諸侯私利</text>
+              <rect x="322" y="294" width="216" height="44" rx="6" fill="#FEF2F2" stroke="#FCA5A5"/>
+              <text x="430" y="321" text-anchor="middle" fill="#B91C1C" font-size="12.5" font-weight="700">鐵器牛耕普及 → 動搖宗族根基</text>
+
+              <line x1="560" y1="234" x2="586" y2="234" stroke="#C88A2E" stroke-width="3" marker-end="url(#s2-arr)"/>
+
+              <!-- Step 3 -->
+              <rect x="592" y="114" width="248" height="240" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+              <rect x="592" y="114" width="248" height="46" rx="10" fill="#C88A2E"/>
+              <text x="716" y="143" text-anchor="middle" fill="#FFFFFF" font-size="15.5" font-weight="700">三、秦制勝出 (P07–10)</text>
+              <text x="610" y="190" fill="#0B1F3A" font-size="14.5" font-weight="700">直管制＋法家三招硬體</text>
+              <text x="610" y="218" fill="#475569" font-size="13">• 取消中間層：壓縮至三層直管</text>
+              <text x="610" y="242" fill="#475569" font-size="13">• 硬體：編戶齊民/軍功/以吏為師</text>
+              <text x="610" y="266" fill="#B91C1C" font-size="13" font-weight="600">• 困境：和平期監督成本無限高</text>
+              <rect x="608" y="294" width="216" height="44" rx="6" fill="#FEF7E8" stroke="#E0A84B"/>
+              <text x="716" y="321" text-anchor="middle" fill="#B4771E" font-size="12.5" font-weight="700">贏得六國戰爭卻十五年速崩</text>
+
+              <line x1="846" y1="234" x2="872" y2="234" stroke="#C88A2E" stroke-width="3" marker-end="url(#s2-arr)"/>
+
+              <!-- Step 4 -->
+              <rect x="878" y="114" width="242" height="240" rx="10" fill="#0B1F3A" stroke="#C88A2E" stroke-width="2"/>
+              <rect x="878" y="114" width="242" height="46" rx="10" fill="#132E52"/>
+              <text x="999" y="143" text-anchor="middle" fill="#E0A84B" font-size="15.5" font-weight="700">四、儒法國家 (P11–14)</text>
+              <text x="896" y="190" fill="#FFFFFF" font-size="14.5" font-weight="700">硬體骨肉＋軟體降本</text>
+              <text x="896" y="218" fill="#CBD5E1" font-size="13">• 儒為表（甜酒）：降低服從成本</text>
+              <text x="896" y="242" fill="#CBD5E1" font-size="13">• 法為裡（骨肉）：維持皇權汲取</text>
+              <text x="896" y="266" fill="#CBD5E1" font-size="13">• 道家潤滑：上位無為變犬儒</text>
+              <rect x="894" y="294" width="210" height="44" rx="6" fill="#C88A2E"/>
+              <text x="999" y="321" text-anchor="middle" fill="#FFFFFF" font-size="12.5" font-weight="700">延續兩千年 ✕ 集權分權鐘擺</text>
+
+              <!-- Bottom Spine -->
+              <rect x="20" y="376" width="1100" height="38" rx="8" fill="#F1F5F9"/>
+              <text x="570" y="400" text-anchor="middle" fill="#0B1F3A" font-size="13.5" font-weight="700">貫穿全書的核心命題：制度轉型並非道德選擇，而是「代理成本」在戰爭與和平壓力下的均衡演進</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">周秦之變是政治社會體制的根本轉型，需以「代理成本」四步脈絡一體理解</span>
+          <span class="page-num">02 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 03 : 根本難題 — 委託-代理成本三來源 (版型 3：結合論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="02 · 第一部：根本難題（版型 3：結合論法）"
+        data-title="統治者無法親管所有人，「代理成本」的高低取決於制度、激勵與技術三大來源"
+        data-note-conclusion="任何古代國家的核心挑戰都一樣：統治者必須委託代理人去管治，而代理人有私利，導致「代理成本（額外損耗）」無處不在。"
+        data-note-evidence="聶輝華拆解三大來源：第一，制度層面（如皇帝到縣令層數越多，指令越容易走樣摻水）；第二，激勵層面（道德風險＝收稅中飽私囊或開城投降；逆向選擇＝溜鬚拍馬升遷）；第三，技術層面（信息不通與交通網絡，報上來的數據經層層修飾）。"
+        data-note-transition="在和平與戰爭兩種不同場景下，這三種代理成本會產生完全不同的致命性。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">02 · PRINCIPAL-AGENT PROBLEM · 代理成本拆解</span>
+            <span class="slide-pacing">建議節奏 01:20–02:00</span>
+          </div>
+          <h2 class="action-title">統治者無法親管所有人，「代理成本」的高低取決於<em>制度、激勵與技術</em>三大來源</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-wide">
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <defs>
+                  <marker id="s3-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M0,1 L9,5 L0,9 z" fill="#0B1F3A"/>
+                  </marker>
+                </defs>
+                <!-- Top Conclusion Box -->
+                <rect x="130" y="14" width="420" height="62" rx="10" fill="#0B1F3A"/>
+                <text x="340" y="40" text-anchor="middle" fill="#E0A84B" font-size="12" font-weight="700">CORE GOVERNANCE LOSS</text>
+                <text x="340" y="63" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">高昂代理成本（統治不得不承受的額外損耗）</text>
+
+                <!-- Converging Arrows -->
+                <line x1="115" y1="120" x2="240" y2="82" stroke="#0B1F3A" stroke-width="2" marker-end="url(#s3-arr)"/>
+                <line x1="340" y1="120" x2="340" y2="84" stroke="#0B1F3A" stroke-width="2" marker-end="url(#s3-arr)"/>
+                <line x1="565" y1="120" x2="440" y2="82" stroke="#0B1F3A" stroke-width="2" marker-end="url(#s3-arr)"/>
+
+                <!-- Driver 1 -->
+                <rect x="18" y="124" width="198" height="278" rx="10" fill="#F8FAFC" stroke="#0B1F3A" stroke-width="1.8"/>
+                <rect x="18" y="124" width="198" height="44" rx="10" fill="#1E4270"/>
+                <text x="117" y="152" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">1. 制度層面</text>
+                <text x="117" y="192" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">代理鏈條太長</text>
+                <rect x="42" y="210" width="150" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="117" y="229" text-anchor="middle" fill="#334155" font-size="12">最高統治者（委託人）</text>
+                <text x="117" y="254" text-anchor="middle" fill="#C88A2E" font-size="13" font-weight="700">↓ 利益考量＋資訊過濾</text>
+                <rect x="42" y="264" width="150" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="117" y="283" text-anchor="middle" fill="#334155" font-size="12">多層中間代理人</text>
+                <text x="117" y="308" text-anchor="middle" fill="#C88A2E" font-size="13" font-weight="700">↓ 走樣・扭曲・摻水</text>
+                <rect x="42" y="318" width="150" height="28" rx="5" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="117" y="337" text-anchor="middle" fill="#B91C1C" font-size="12" font-weight="700">基層縣令執行失真</text>
+                <text x="117" y="378" text-anchor="middle" fill="#475569" font-size="12">發出的指令 ≠ 執行的結果</text>
+
+                <!-- Driver 2 -->
+                <rect x="240" y="124" width="200" height="278" rx="10" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+                <rect x="240" y="124" width="200" height="44" rx="10" fill="#C88A2E"/>
+                <text x="340" y="152" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">2. 激勵層面</text>
+                <text x="340" y="192" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">道德風險 &amp; 逆向選擇</text>
+                <rect x="256" y="210" width="168" height="78" rx="7" fill="#FFFFFF" stroke="#E0A84B"/>
+                <text x="340" y="231" text-anchor="middle" fill="#B4771E" font-size="13" font-weight="700">道德風險 (偷懶/謀私)</text>
+                <text x="340" y="253" text-anchor="middle" fill="#334155" font-size="12">派去收稅 ➔ 中飽私囊</text>
+                <text x="340" y="273" text-anchor="middle" fill="#334155" font-size="12">派去守城 ➔ 開城投降</text>
+
+                <rect x="256" y="300" width="168" height="84" rx="7" fill="#FFFFFF" stroke="#E0A84B"/>
+                <text x="340" y="321" text-anchor="middle" fill="#B4771E" font-size="13" font-weight="700">逆向選擇 (用人失準)</text>
+                <text x="340" y="343" text-anchor="middle" fill="#334155" font-size="12">溜鬚拍馬者一路升遷</text>
+                <text x="340" y="363" text-anchor="middle" fill="#334155" font-size="12">真正能幹者反被埋沒</text>
+
+                <!-- Driver 3 -->
+                <rect x="464" y="124" width="198" height="278" rx="10" fill="#F8FAFC" stroke="#0B1F3A" stroke-width="1.8"/>
+                <rect x="464" y="124" width="198" height="44" rx="10" fill="#1E4270"/>
+                <text x="563" y="152" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">3. 技術層面</text>
+                <text x="563" y="192" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">信息與交通限制</text>
+                <rect x="480" y="212" width="166" height="58" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="563" y="236" text-anchor="middle" fill="#0B1F3A" font-size="12.5" font-weight="700">交通網絡與通訊瓶頸</text>
+                <text x="563" y="256" text-anchor="middle" fill="#475569" font-size="12">無法即時知悉基層實況</text>
+
+                <rect x="480" y="284" width="166" height="68" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+                <text x="563" y="308" text-anchor="middle" fill="#0B1F3A" font-size="12.5" font-weight="700">信息嚴重不對稱</text>
+                <text x="563" y="328" text-anchor="middle" fill="#475569" font-size="12">上報數據經層層修飾，</text>
+                <text x="563" y="344" text-anchor="middle" fill="#475569" font-size="12">代理人極易做手腳</text>
+
+                <text x="563" y="382" text-anchor="middle" fill="#B91C1C" font-size="12.5" font-weight="700">防範將領擁兵自重＝額外成本</text>
+              </svg>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card navy-top">
+                <div class="card-label">DEFINITION · 核心定義</div>
+                <h3 class="card-title">什麼是政治中的「代理成本」？</h3>
+                <ul class="mc-list">
+                  <li><strong>直接定義</strong>：統治者為了讓代理人按自己意思辦事，不得不付出的額外代價與精力。</li>
+                  <li><strong>典型案例</strong>：派將軍外出打仗，防範他擁兵自重、不聽調遣所消耗的監控精力，本身就是高昂的代理成本。</li>
+                  <li><strong>普遍性</strong>：從古代帝國到現代組織，凡存在委託-代理關係便必定存在，區別只在於<strong>高低</strong>。</li>
+                </ul>
+              </div>
+
+              <div class="callout-gold">
+                <strong>經濟學判準：</strong>制度的優劣沒有抽象標準；誰的制度能將關鍵情境下的三類「代理成本」壓到最低，誰就能在長週期競爭中勝出。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">代理成本決定治理損耗，制度設計的核心任務就是對抗鏈條走樣、道德風險與資訊不對稱</span>
+          <span class="page-num">03 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 04 : 和平 vs 戰爭與三組制度對決 (版型 6：對立論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="03 · 第一部：制度競爭（版型 6：對立論法）"
+        data-title="春秋戰國數百年持久戰將「戰時代理成本」推向極限，迫使列國進行三組生死制度對決"
+        data-note-conclusion="國家競爭本質上是制度競爭：在「統治者權力慾望無限 × 資源稀缺」的約束下，戰爭時期誰的代理成本更低，誰就能淘汰對手。"
+        data-note-evidence="和平時期主要代理問題是徵稅與維持秩序，尚可慢慢協調；戰爭時期則要讓農民當兵、士兵賣命、高效運糧並管好新佔領區，決策鏈條稍微一拖就會輸掉戰爭。因此春秋戰國的勝負，實質取決於三組制度對決。"
+        data-note-transition="理解了戰爭篩選機制後，我們先檢視原本稱霸和平時期的「周制」究竟如何運作，又為何失靈。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">03 · INSTITUTIONAL COMPETITION · 戰國篩選機制</span>
+            <span class="slide-pacing">建議節奏 02:00–02:40</span>
+          </div>
+          <h2 class="action-title">春秋戰國持久戰將<em>戰時代理成本</em>推至極限，迫使國家展開三組核心制度對決</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2">
+            <!-- Left: Peace vs War comparison table -->
+            <div class="mc-card navy-top" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">CONTEXT SHIFT · 雙時態代理壓力對比</div>
+                <h3 class="card-title">為什麼「數百年戰國」徹底改變遊戲規則？</h3>
+                <table class="mc-table">
+                  <thead>
+                    <tr>
+                      <th style="width:24%;">比較維度</th>
+                      <th style="width:36%;">和平時期</th>
+                      <th style="width:40%;">戰爭時期（春秋戰國常態）</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>核心代理任務</strong></td>
+                      <td>徵收賦稅、維持社會基本秩序</td>
+                      <td><strong>農民當兵、士兵賣命、高效運糧、管治新佔領區</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>時間容錯度</strong></td>
+                      <td>相對寬裕，可逐級協調溝通</td>
+                      <td><strong>分秒必爭，決策鏈稍長即戰敗亡國</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>競爭均衡</strong></td>
+                      <td>熟人自治即可穩定運行</td>
+                      <td><strong>權力慾望無限 × 資源稀缺 → 低成本制度淘汰高成本制度</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="callout-navy">
+                <strong>演化鐵律：</strong>均衡狀態下，代理成本更低的國家必然打敗代理成本更高的國家；代理成本由制度決定，故國家競爭說到底是<strong>制度的競爭</strong>。
+              </div>
+            </div>
+
+            <!-- Right: Three Institutional Duels SVG -->
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <text x="280" y="26" text-anchor="middle" fill="#0B1F3A" font-size="16" font-weight="700">春秋戰國「周秦之變」三組核心制度對決</text>
+                <text x="280" y="48" text-anchor="middle" fill="#64748B" font-size="12.5">秦制戰勝六國，本質是右側三套制度全面擊敗左側</text>
+
+                <!-- Column Headers -->
+                <rect x="20" y="68" width="215" height="36" rx="6" fill="#1E4270"/>
+                <text x="127" y="91" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">秦制勝出方案（低戰時成本）</text>
+
+                <rect x="325" y="68" width="215" height="36" rx="6" fill="#E2E8F0"/>
+                <text x="432" y="91" text-anchor="middle" fill="#475569" font-size="14" font-weight="700">傳統周制方案（高戰時成本）</text>
+
+                <!-- Duel 1 -->
+                <rect x="20" y="122" width="215" height="78" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+                <text x="127" y="155" text-anchor="middle" fill="#0B1F3A" font-size="20" font-weight="700">郡縣制</text>
+                <text x="127" y="181" text-anchor="middle" fill="#B4771E" font-size="12.5" font-weight="700">中央直派・動員零阻滯</text>
+
+                <circle cx="280" cy="161" r="20" fill="#0B1F3A"/>
+                <text x="280" y="166" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="800">VS</text>
+
+                <rect x="325" y="122" width="215" height="78" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+                <text x="432" y="155" text-anchor="middle" fill="#475569" font-size="20" font-weight="700">封建制</text>
+                <text x="432" y="181" text-anchor="middle" fill="#64748B" font-size="12.5">層層分封・諸侯各自盤算</text>
+
+                <!-- Duel 2 -->
+                <rect x="20" y="220" width="215" height="78" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+                <text x="127" y="253" text-anchor="middle" fill="#0B1F3A" font-size="20" font-weight="700">軍功制</text>
+                <text x="127" y="279" text-anchor="middle" fill="#B4771E" font-size="12.5" font-weight="700">殺敵晉升・激勵相容賣命</text>
+
+                <circle cx="280" cy="259" r="20" fill="#0B1F3A"/>
+                <text x="280" y="264" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="800">VS</text>
+
+                <rect x="325" y="220" width="215" height="78" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+                <text x="432" y="253" text-anchor="middle" fill="#475569" font-size="20" font-weight="700">貴族制</text>
+                <text x="432" y="279" text-anchor="middle" fill="#64748B" font-size="12.5">血緣世襲・戰場逆向選擇</text>
+
+                <!-- Duel 3 -->
+                <rect x="20" y="318" width="215" height="78" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+                <text x="127" y="351" text-anchor="middle" fill="#0B1F3A" font-size="20" font-weight="700">官僚制</text>
+                <text x="127" y="377" text-anchor="middle" fill="#B4771E" font-size="12.5" font-weight="700">任免雇員・直接聽命皇權</text>
+
+                <circle cx="280" cy="357" r="20" fill="#0B1F3A"/>
+                <text x="280" y="362" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="800">VS</text>
+
+                <rect x="325" y="318" width="215" height="78" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+                <text x="432" y="351" text-anchor="middle" fill="#475569" font-size="20" font-weight="700">宗法制</text>
+                <text x="432" y="377" text-anchor="middle" fill="#64748B" font-size="12.5">小共同體・只忠直接領主</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">郡縣制、軍功制、官僚制構成周秦之變的戰略勝負手</span>
+          <span class="page-num">04 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 05 : 周制正名與「打包委託」分包邏輯 (版型 1：一對一論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="04 · 第二部：周制邏輯（版型 1：一對一論法）"
+        data-title="秦朝不是「進入封建社會」而是「走出封建」；周制核心是以熟人社會降低監督的「打包委託」"
+        data-note-conclusion="理解周制必須先為「封建」正名：西周才是真正的封邦建國封建社會，秦始皇恰恰是「滅封建、立郡縣」。周制透過層層「打包委託」，靠熟人社會維持低監督成本。"
+        data-note-evidence="教科書稱「秦朝進入封建社會」源自郭沫若 20 世紀的說法，秦暉認為完全搞反。在周制分包體系裡，「我的僕人的僕人不是我的僕人」、「我的主人的主人不是我的主人」，每層領主只管自己的「包」。"
+        data-note-transition="這套「打包委託」具體靠哪四根制度支柱與經濟基礎運轉？下一頁拆解。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">04 · ZHOU FEUDALISM · 概念正名與打包委託</span>
+            <span class="slide-pacing">建議節奏 02:40–03:20</span>
+          </div>
+          <h2 class="action-title">秦朝是<em>「走出封建」</em>而非進入封建；周制以「打包委託」藉熟人社會降本</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-left">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card red-top">
+                <div class="card-label">CONCEPT CORRECTION · 關鍵正名</div>
+                <h3 class="card-title">破除教科書對「封建」的誤讀</h3>
+                <ul class="mc-list">
+                  <li><strong>流行誤說</strong>：20 世紀郭沫若提出「秦朝進入封建社會」。</li>
+                  <li><strong>秦暉糾偏</strong>：古語「封建」即「封邦建國」（天子封諸侯、諸侯封卿大夫）。<strong>西周才是封建社會</strong>，秦始皇功績恰是<strong>「滅封建、立郡縣」</strong>，因此秦朝是<strong>走出封建社會</strong>。</li>
+                </ul>
+              </div>
+
+              <div class="mc-card gold-top" style="flex:1;">
+                <div class="card-label">GOVERNANCE LOGIC · 分包制優勢</div>
+                <h3 class="card-title">為何長鏈條在和平期反而好管？</h3>
+                <ul class="mc-list">
+                  <li><strong>邊界清晰</strong>：周天子不直接管每個人，而是層層打包分封。</li>
+                  <li><strong>熟人治理</strong>：每一包內部都是血緣宗族熟人社會，<strong>信息不對稱極低、監督成本極低</strong>，因此在和平時期運轉相當良好。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <text x="320" y="26" text-anchor="middle" fill="#0B1F3A" font-size="16" font-weight="700">周制「打包委託（分包制）」代理模型</text>
+
+                <!-- Nested / Cascading Packages -->
+                <!-- Tier 1 -->
+                <rect x="200" y="48" width="240" height="52" rx="8" fill="#0B1F3A"/>
+                <text x="320" y="72" text-anchor="middle" fill="#E0A84B" font-size="12" font-weight="700">最高委託人</text>
+                <text x="320" y="91" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">周天子（不直接管庶人）</text>
+
+                <line x1="250" y1="100" x2="155" y2="134" stroke="#C88A2E" stroke-width="2.5"/>
+                <line x1="390" y1="100" x2="485" y2="134" stroke="#C88A2E" stroke-width="2.5"/>
+                <text x="320" y="122" text-anchor="middle" fill="#B4771E" font-size="11.5" font-weight="700">打包分封土地與人民</text>
+
+                <!-- Tier 2 -->
+                <rect x="40" y="136" width="230" height="54" rx="8" fill="#1E4270"/>
+                <text x="155" y="160" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">諸侯國（包 A）</text>
+                <text x="155" y="180" text-anchor="middle" fill="#CBD5E1" font-size="11.5">僅對天子負責・包內自主</text>
+
+                <rect x="370" y="136" width="230" height="54" rx="8" fill="#1E4270"/>
+                <text x="485" y="160" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="700">諸侯國（包 B）</text>
+                <text x="485" y="180" text-anchor="middle" fill="#CBD5E1" font-size="11.5">僅對天子負責・包內自主</text>
+
+                <line x1="155" y1="190" x2="155" y2="218" stroke="#64748B" stroke-width="2"/>
+                <line x1="485" y1="190" x2="485" y2="218" stroke="#64748B" stroke-width="2"/>
+
+                <!-- Tier 3 -->
+                <rect x="40" y="220" width="230" height="52" rx="8" fill="#F8FAFC" stroke="#1E4270" stroke-width="1.8"/>
+                <text x="155" y="244" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">卿大夫采邑（再分包）</text>
+                <text x="155" y="263" text-anchor="middle" fill="#475569" font-size="11.5">血緣宗族熟人網絡</text>
+
+                <rect x="370" y="220" width="230" height="52" rx="8" fill="#F8FAFC" stroke="#1E4270" stroke-width="1.8"/>
+                <text x="485" y="244" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">卿大夫采邑（再分包）</text>
+                <text x="485" y="263" text-anchor="middle" fill="#475569" font-size="11.5">血緣宗族熟人網絡</text>
+
+                <line x1="155" y1="272" x2="155" y2="298" stroke="#64748B" stroke-width="2"/>
+                <line x1="485" y1="272" x2="485" y2="298" stroke="#64748B" stroke-width="2"/>
+
+                <!-- Tier 4 -->
+                <rect x="40" y="300" width="560" height="48" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+                <text x="320" y="329" text-anchor="middle" fill="#334155" font-size="14" font-weight="700">士 ➔ 庶人（嵌入宗族小共同體內，不直接面對最高君主）</text>
+
+                <!-- Principle Callout -->
+                <rect x="40" y="362" width="560" height="46" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="1.5"/>
+                <text x="320" y="390" text-anchor="middle" fill="#0B1F3A" font-size="13.5" font-weight="700">分包鐵律：「我的僕人的僕人不是我的僕人」｜「我的主人的主人不是我的主人」</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">西周「打包委託」不追求跨層直管，而是容許長鏈條並在每包內實現熟人低成本監督</span>
+          <span class="page-num">05 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 06 : 周制四大支柱與井田經濟基礎 (版型 2：並列論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="05 · 第二部：周制支柱與產權（版型 2：並列論法）"
+        data-title="周制靠「小共同體、孝高於忠、權責對應、鄉舉里選」與井田公地維繫，卻因鐵器牛耕動搖"
+        data-note-conclusion="周制四個特徵相互支撐，連同井田公地制度構成一個穩固的小共同體社會；直到鐵器牛耕普及，個體家庭才具備脫離宗族獨立耕作的能力。"
+        data-note-evidence="關鍵史料：辛俞追隨欒氏而不從晉君（忠於直接委託人）；伍子胥為父鞭屍楚平王被視為義舉，屈原愚忠反是周制異類；孟子「聞誅一夫紂矣」反映君主違約即可解約，氣得朱元璋把孟子趕出孔廟；井田制屬於「族」和「宗」的小共同體公地（「溥天之下莫非王土」僅指政治領導而非直接產權）。"
+        data-note-transition="當和平期演變為數百年的戰國持久戰，這套溫情脈脈的熟人分包制隨即暴露出致命缺陷。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">05 · ZHOU PILLARS &amp; JINGTIAN · 四大支柱與經濟變遷</span>
+            <span class="slide-pacing">建議節奏 03:20–04:05</span>
+          </div>
+          <h2 class="action-title">周制以<em>四大倫理與選拔支柱</em>及宗族公地維繫，卻在鐵器牛耕普及後鬆動</h2>
+        </div>
+
+        <div class="slide-body" style="gap:14px;">
+          <!-- 4 Pillars Row -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;">
+            <div class="mc-card navy-top">
+              <div class="card-label">01 · 社會單元</div>
+              <h3 class="card-title">小共同體本位</h3>
+              <ul class="mc-list">
+                <li>基本單元是<strong>血緣宗族</strong>。</li>
+                <li><strong>辛俞</strong>堅持追隨欒氏家族，即便違背晉國國君命令亦無人指責。</li>
+                <li>只需忠於「直接委託人」，無須跨層負責。</li>
+              </ul>
+            </div>
+
+            <div class="mc-card navy-top">
+              <div class="card-label">02 · 倫理排序</div>
+              <h3 class="card-title">孝高於忠</h3>
+              <ul class="mc-list">
+                <li>「為父絕君，不為君絕父」，強調<strong>從道不從君</strong>。</li>
+                <li><strong>伍子胥</strong>為父鞭屍楚平王是義舉；<strong>屈原</strong>愚忠楚王反是周制異類。</li>
+                <li>後世改推屈原，重塑為「忠任何君主」。</li>
+              </ul>
+            </div>
+
+            <div class="mc-card gold-top">
+              <div class="card-label">03 · 契約精神</div>
+              <h3 class="card-title">權責對應</h3>
+              <ul class="mc-list">
+                <li>「君君臣臣」是<strong>雙向約束</strong>，非單向服從。</li>
+                <li>孟子：<strong>「聞誅一夫紂矣，未聞弑君也」</strong>＝委託人違約，代理人可解除合同。</li>
+                <li>明太祖<strong>朱元璋</strong>氣得將孟子逐出孔廟。</li>
+              </ul>
+            </div>
+
+            <div class="mc-card navy-top">
+              <div class="card-label">04 · 選拔機制</div>
+              <h3 class="card-title">鄉舉里選</h3>
+              <ul class="mc-list">
+                <li>下面推薦、上面考察的<strong>「尚德之舉」</strong>。</li>
+                <li>熟人社會裡誰品德好、能力強皆知情，信息不對稱極低。</li>
+                <li>靠口碑與品德，非後世科舉量化考試。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Economic Transition SVG -->
+          <div class="svg-box" style="height:142px;padding:10px 16px;">
+            <svg viewBox="0 0 1140 116" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+              <defs>
+                <marker id="s6-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M0,1 L9,5 L0,9 z" fill="#C88A2E"/>
+                </marker>
+              </defs>
+              <!-- Box 1: Jingtian -->
+              <rect x="8" y="10" width="380" height="96" rx="8" fill="#F8FAFC" stroke="#1E4270" stroke-width="1.5"/>
+              <text x="26" y="36" fill="#0B1F3A" font-size="14" font-weight="700">經濟基礎正名：井田制＝小共同體公共土地</text>
+              <text x="26" y="60" fill="#475569" font-size="12.5">• 既非國有制，亦非私有制，土地屬於「族」與「宗」</text>
+              <text x="26" y="82" fill="#475569" font-size="12.5">• 「溥天之下，莫非王土」指政治領導，非國家產權控制</text>
+
+              <line x1="396" y1="58" x2="430" y2="58" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s6-arr)"/>
+
+              <!-- Box 2: Tech Base -->
+              <rect x="436" y="10" width="320" height="96" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+              <text x="454" y="36" fill="#0B1F3A" font-size="14" font-weight="700">西周技術條件：木石農具・集體耕作</text>
+              <text x="454" y="60" fill="#475569" font-size="12.5">• 單家獨戶無法存活，百姓無法脫離宗族</text>
+              <text x="454" y="82" fill="#475569" font-size="12.5">• 小共同體結構在和平時期相當穩固</text>
+
+              <line x1="764" y1="58" x2="798" y2="58" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s6-arr)"/>
+
+              <!-- Box 3: Disruption -->
+              <rect x="804" y="10" width="328" height="96" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+              <text x="822" y="36" fill="#B4771E" font-size="14" font-weight="700">關鍵轉折：鐵器牛耕普及改變一切</text>
+              <text x="822" y="60" fill="#0B1F3A" font-size="12.5" font-weight="600">• 個體家庭具備脫離宗族獨立耕作的能力</text>
+              <text x="822" y="82" fill="#0B1F3A" font-size="12.5" font-weight="600">• 為法家「拆散宗族、編戶齊民」提供經濟基礎</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">周制四支柱互相咬合，而鐵器牛耕讓農戶能脫離宗族，開啟法家改造空間</span>
+          <span class="page-num">06 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 07 : 周制戰時崩壞 vs 秦制直管制與基層穿透 (版型 6：對立論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="06 · 第三部：直管制轉向（版型 6：對立論法）"
+        data-title="周制因諸侯私利與世襲在戰時失靈；秦制「取消中間層」壓縮為三層直管並穿透至廿五家之里"
+        data-note-conclusion="秦制與周制在組織架構上的本質差異，就是從「五層打包分包」變成「三層一竿子插到底」，且帝國權力深入最基層村落，打破所謂「皇權不下縣」的錯覺。"
+        data-note-evidence="周制戰時三大死穴：諸侯不一定替天子打仗（道德風險）、代理鏈長導致徵兵徵糧低效（制度成本）、貴族世襲不見得能打仗（逆向選擇）。秦制將鏈條壓縮為「皇帝—郡守—縣令」，所有官員皆皇帝雇員；漢承秦制，縣以下設「鄉」「里」，一里僅二十五家卻設里正、里父老、里佐、里治中，有圍牆早晚點名關大門，劉邦當過的泗水亭長即相當於鄉裡公安派出所所長。"
+        data-note-transition="在「一竿子插到底」的直管架構上，法家究竟靠哪三招具體制度擊敗六國？">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">06 · DIRECT GOVERNANCE · 五層分包 vs. 三層直管</span>
+            <span class="slide-pacing">建議節奏 04:05–04:45</span>
+          </div>
+          <h2 class="action-title">秦制<em>「取消中間層、一竿子插到底」</em>壓縮代理鏈至三層，權力直抵廿五家之里</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-wide">
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <!-- Left Side: Zhou 5 layers -->
+                <rect x="16" y="14" width="290" height="392" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+                <text x="161" y="42" text-anchor="middle" fill="#475569" font-size="14.5" font-weight="700">周制：五層分包制（戰時失靈）</text>
+
+                <rect x="56" y="58" width="210" height="36" rx="6" fill="#64748B"/><text x="161" y="81" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">1. 天子</text>
+                <text x="161" y="109" text-anchor="middle" fill="#B91C1C" font-size="11.5">↓ 道德風險：諸侯各有私利</text>
+                <rect x="56" y="118" width="210" height="36" rx="6" fill="#94A3B8"/><text x="161" y="141" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">2. 諸侯</text>
+                <text x="161" y="169" text-anchor="middle" fill="#B91C1C" font-size="11.5">↓ 制度成本：徵兵徵糧低效</text>
+                <rect x="56" y="178" width="210" height="36" rx="6" fill="#94A3B8"/><text x="161" y="201" text-anchor="middle" fill="#fff" font-size="13.5" font-weight="700">3. 卿大夫</text>
+                <text x="161" y="229" text-anchor="middle" fill="#B91C1C" font-size="11.5">↓ 逆向選擇：貴族世襲未必能戰</text>
+                <rect x="56" y="238" width="210" height="36" rx="6" fill="#CBD5E1"/><text x="161" y="261" text-anchor="middle" fill="#334155" font-size="13.5" font-weight="700">4. 士</text>
+                <text x="161" y="288" text-anchor="middle" fill="#64748B" font-size="11.5">↓</text>
+                <rect x="56" y="296" width="210" height="36" rx="6" fill="#E2E8F0"/><text x="161" y="319" text-anchor="middle" fill="#334155" font-size="13.5" font-weight="700">5. 庶人（屬宗族）</text>
+
+                <rect x="34" y="348" width="254" height="44" rx="6" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="161" y="375" text-anchor="middle" fill="#B91C1C" font-size="12.5" font-weight="700">層級過多＋各自有獨立利益</text>
+
+                <!-- Transition Arrow -->
+                <path d="M312,205 L354,205" stroke="#C88A2E" stroke-width="4"/>
+                <polygon points="350,196 368,205 350,214" fill="#C88A2E"/>
+
+                <!-- Right Side: Qin 3 layers -->
+                <rect x="374" y="14" width="290" height="392" rx="10" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2"/>
+                <text x="519" y="42" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">秦制：三層直管制（一竿子插到底）</text>
+
+                <rect x="404" y="64" width="230" height="50" rx="8" fill="#0B1F3A"/>
+                <text x="519" y="86" text-anchor="middle" fill="#E0A84B" font-size="11.5" font-weight="700">唯一委託人（僅受「上天」制約）</text>
+                <text x="519" y="106" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">1. 皇帝</text>
+
+                <text x="519" y="136" text-anchor="middle" fill="#0B1F3A" font-size="12" font-weight="700">↓ 皇帝直接任免之「雇員」</text>
+
+                <rect x="404" y="146" width="230" height="44" rx="8" fill="#1E4270"/>
+                <text x="519" y="173" text-anchor="middle" fill="#FFFFFF" font-size="15.5" font-weight="700">2. 郡守（無獨立利益）</text>
+
+                <text x="519" y="212" text-anchor="middle" fill="#0B1F3A" font-size="12" font-weight="700">↓ 垂直指揮無諸侯阻隔</text>
+
+                <rect x="404" y="222" width="230" height="44" rx="8" fill="#C88A2E"/>
+                <text x="519" y="249" text-anchor="middle" fill="#FFFFFF" font-size="15.5" font-weight="700">3. 縣令（含鄉・亭・里基層）</text>
+
+                <text x="519" y="288" text-anchor="middle" fill="#0B1F3A" font-size="12" font-weight="700">↓ 取消宗族中間層・直接統治</text>
+
+                <rect x="404" y="298" width="230" height="44" rx="8" fill="#FFFFFF" stroke="#0B1F3A" stroke-width="1.5"/>
+                <text x="519" y="325" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">編戶齊民（個體被統治者）</text>
+
+                <rect x="394" y="352" width="250" height="40" rx="6" fill="#0B1F3A"/>
+                <text x="519" y="377" text-anchor="middle" fill="#E0A84B" font-size="12.5" font-weight="700">所有官員皆為雇員，皇帝權力管到所有人</text>
+              </svg>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card red-top">
+                <div class="card-label">MYTH BUSTER · 破除歷史迷思</div>
+                <h3 class="card-title">秦漢根本不存在「皇權不下縣」</h3>
+                <ul class="mc-list">
+                  <li><strong>常見印象</strong>：誤以為縣以下全由鄉紳自治。</li>
+                  <li><strong>秦漢實態（里—鄉—縣三級）</strong>：最基層的「里」僅<strong>二十五家</strong>，卻設有<strong>里正、里父老、里佐、里治中</strong>等多名官吏。</li>
+                  <li><strong>派出單位「亭」</strong>：劉邦曾任<strong>泗水亭長</strong>，相當於鄉裡的公安派出所所長。</li>
+                </ul>
+              </div>
+
+              <div class="mc-card navy-top" style="flex:1;">
+                <div class="card-label">MILITARIZED VILLAGE · 準軍事化管理</div>
+                <h3 class="card-title">連基層村落都在國家控管中</h3>
+                <ul class="mc-list">
+                  <li><strong>實體管制</strong>：作為基層村落的「里」建有<strong>圍牆</strong>。</li>
+                  <li><strong>作息點名</strong>：每天早上出門點名、晚上回來點名，還要關大門；婦女晚上還須集體勞作，堪稱<strong>準軍事化管理</strong>。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">秦制透過取消分封中間層並延伸至廿五家之里，實現了對社會人力物力的極致直管</span>
+          <span class="page-num">07 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 08 : 法家硬體三招 (版型 2：並列論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="07 · 第三部：法家硬體三招（版型 2：並列論法）"
+        data-title="法家打造「編戶齊民、軍功制、以吏為師」三套硬體，分別精準攻克控制、激勵與選拔難題"
+        data-note-conclusion="秦制的勝出不是靠口號，而是三套可操作、可複製的「硬體制度」：編戶齊民解決控制、軍功制解決激勵相容、以吏為師解決逆向選擇。"
+        data-note-evidence="商鞅變法規定一戶有兩名及以上成年男子不分家立戶就大幅加稅，以此拆散宗族、強制個體登記戶籍；軍功制按殺敵人頭論賞晉升，不論出身，這在經濟學上叫「激勵相容」；以吏為師用「強謹」（對上絕對服從、對下強硬執行）篩選沒有獨立意志的傳聲筒。"
+        data-note-transition="這三招硬體構成了秦國強大的戰爭機器，但它們背後究竟建立在什麼樣的人性假設與權力觀之上？">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">07 · LEGALIST HARDWARE · 秦制三大制度支柱</span>
+            <span class="slide-pacing">建議節奏 04:45–05:25</span>
+          </div>
+          <h2 class="action-title">法家打造<em>「編戶齊民、軍功制、以吏為師」</em>三套硬體，攻克控制、激勵與選拔難題</h2>
+        </div>
+
+        <div class="slide-body" style="gap:14px;">
+          <div class="grid-3">
+            <div class="mc-card navy-top">
+              <div class="card-label">WEAPON 01 · 解決「控制」問題</div>
+              <h3 class="card-title">第一招：編戶齊民</h3>
+              <ul class="mc-list">
+                <li><strong>核心動作</strong>：把分包制變成直管制，徹底拆散周制宗族根基。</li>
+                <li><strong>商鞅變法手段</strong>：規定一戶若有<strong>兩名及以上成年男子</strong>不分家立戶，賦稅大幅加重，強制分家、禁止族居。</li>
+                <li><strong>制度結果</strong>：每個人直接登記國家戶籍，「編入戶籍、齊等為民」，在皇帝面前沒有身份差異，只有服從義務。</li>
+              </ul>
+            </div>
+
+            <div class="mc-card gold-top">
+              <div class="card-label">WEAPON 02 · 解決「激勵」問題</div>
+              <h3 class="card-title">第二招：軍功制</h3>
+              <ul class="mc-list">
+                <li><strong>核心動作</strong>：取代周制貴族世襲，殺敵有賞、<strong>按人頭計算</strong>，不論出身皆可憑軍功晉升。</li>
+                <li><strong>經濟學本質</strong>：把士兵個人利益與戰爭勝負直接掛鉤——殺敵越多、賞賜越多、地位越高。</li>
+                <li><strong>激勵相容</strong>：讓代理人收益與委託人目標完全對齊，是解決戰場信息不對稱與偷懶的根本機制。</li>
+              </ul>
+            </div>
+
+            <div class="mc-card navy-top">
+              <div class="card-label">WEAPON 03 · 解決「選拔」問題</div>
+              <h3 class="card-title">第三招：以吏為師</h3>
+              <ul class="mc-list">
+                <li><strong>選拔唯一標準</strong>：<strong>「強謹」</strong>——對上絕對服從（謹），對下敢於強硬執行（強）。</li>
+                <li><strong>官吏定位</strong>：官吏不是治理者，而是皇帝在基層的<strong>傳聲筒</strong>，沒有獨立意志，只需完成君主指令。</li>
+                <li><strong>攻克難題</strong>：解決逆向選擇——我不需要你聰明有主見，只需要你聽話、敢辦事。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Synthesis SVG -->
+          <div class="svg-box" style="height:122px;padding:10px 16px;">
+            <svg viewBox="0 0 1140 96" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+              <rect x="8" y="8" width="265" height="80" rx="8" fill="#F1F5F9" stroke="#1E4270"/>
+              <text x="140" y="38" text-anchor="middle" fill="#0B1F3A" font-size="14" font-weight="700">編戶齊民 ➔ 徵兵徵糧效率極高</text>
+              <text x="140" y="64" text-anchor="middle" fill="#475569" font-size="12.5">宗族庇護消失，人力物力直達國家</text>
+
+              <text x="292" y="55" text-anchor="middle" fill="#C88A2E" font-size="22" font-weight="800">＋</text>
+
+              <rect x="312" y="8" width="265" height="80" rx="8" fill="#FEF7E8" stroke="#C88A2E"/>
+              <text x="444" y="38" text-anchor="middle" fill="#0B1F3A" font-size="14" font-weight="700">軍功制 ➔ 士兵賣命意願最強</text>
+              <text x="444" y="64" text-anchor="middle" fill="#B4771E" font-size="12.5">激勵相容，打通戰時上升通道</text>
+
+              <text x="596" y="55" text-anchor="middle" fill="#C88A2E" font-size="22" font-weight="800">＋</text>
+
+              <rect x="616" y="8" width="265" height="80" rx="8" fill="#F1F5F9" stroke="#1E4270"/>
+              <text x="748" y="38" text-anchor="middle" fill="#0B1F3A" font-size="14" font-weight="700">以吏為師 ➔ 執行命令不走樣</text>
+              <text x="748" y="64" text-anchor="middle" fill="#475569" font-size="12.5">強謹傳聲筒，壓縮執行誤差</text>
+
+              <text x="900" y="55" text-anchor="middle" fill="#0B1F3A" font-size="22" font-weight="800">＝</text>
+
+              <rect x="920" y="8" width="212" height="80" rx="8" fill="#0B1F3A"/>
+              <text x="1026" y="38" text-anchor="middle" fill="#E0A84B" font-size="14" font-weight="700">戰爭期代理成本最低</text>
+              <text x="1026" y="64" text-anchor="middle" fill="#FFFFFF" font-size="12.5">三組制度對決全面勝出</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">三套硬體合圍出極致戰爭動員力，將戰時代理成本壓至列國最低</span>
+          <span class="page-num">08 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 09 : 法家底層邏輯與現代法治/制衡辨偽 (版型 6/8：對照辨偽)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="08 · 第三部：法家底層邏輯（版型 6：概念辨偽）"
+        data-title="法家以極端「性惡論」推出弱民強國，其「法、術」與現代法治、三權分立方向完全相反"
+        data-note-conclusion="絕對不能把法家的「法」與「術」套上現代政治概念：法家起點是極端性惡論與零和博弈，追求的是皇權安全與絕對支配。"
+        data-note-evidence="原文引用：「夫以妻之近與子之親而猶不可信，則其餘無可信者矣」；《商君書》明言「民弱國強，民強國弱」，把百姓控制在「吃不飽但餓不死」狀態，透過愚民、連坐、舉報扼殺社會活力；譚嗣同痛批「二千年來之政，秦政也，皆大盜也」。商鞅徙木立信與趙高指鹿為馬都是權力任性的表演；韓非「術者，藏之於胸中，以潛御群臣者也」只制衡群臣而不制衡皇帝。"
+        data-note-transition="這套冷酷卻高效的戰爭硬體，在秦始皇統一天下、進入和平時期後，立刻面臨致命反噬。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">08 · LEGALIST AXIOM · 性惡起點與概念辨偽</span>
+            <span class="slide-pacing">建議節奏 05:25–06:05</span>
+          </div>
+          <h2 class="action-title">法家起點是<em>極端性惡論與弱民強國</em>，「法」與「術」皆與現代法治背道而馳</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-left">
+            <!-- Left: Causal Axiom Chain -->
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card dark">
+                <div class="card-label">LOGICAL ORIGIN · 邏輯起點</div>
+                <h3 class="card-title">極端「人性本惡」假設</h3>
+                <p style="margin:0 0 8px;font-size:13.5px;color:#FDE6B8;line-height:1.55;">
+                  「夫以妻之近與子之親而猶不可信，則其餘無可信者矣。」
+                </p>
+                <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.82);line-height:1.55;">
+                  這不是修辭誇張，而是制度起點：既然連妻兒都不可信，就不能靠道德、倫理或感情維持秩序，只能靠「法、術、勢」控制。
+                </p>
+              </div>
+
+              <div class="mc-card red-top" style="flex:1;">
+                <div class="card-label">ZERO-SUM CONCLUSION · 《商君書》</div>
+                <h3 class="card-title">冷酷結論：「民弱國強，民強國弱」</h3>
+                <ul class="mc-list">
+                  <li>將百姓控制在<strong>「吃不飽但餓不死」</strong>的狀態。</li>
+                  <li>透過<strong>愚民、連坐、鼓勵舉報</strong>扼殺社會活力，確保皇權對人力物力的單向汲取。</li>
+                  <li>譚嗣同沉痛概括：<strong>「二千年來之政，秦政也，皆大盜也。」</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right: Legalism vs Modern Concepts SVG Comparison -->
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <text x="320" y="26" text-anchor="middle" fill="#0B1F3A" font-size="16" font-weight="700">核心概念拆誤：法家「法・術」 vs. 現代政治制度</text>
+
+                <!-- Row 1: LAW -->
+                <rect x="16" y="48" width="608" height="172" rx="10" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <rect x="16" y="48" width="608" height="36" rx="10" fill="#0B1F3A"/>
+                <text x="320" y="71" text-anchor="middle" fill="#E0A84B" font-size="14" font-weight="700">辨偽一：法家的「法」 ≠ 現代法治 (Rule of Law)</text>
+
+                <rect x="30" y="96" width="275" height="110" rx="8" fill="#FEF2F2" stroke="#FCA5A5"/>
+                <text x="167" y="119" text-anchor="middle" fill="#B91C1C" font-size="13.5" font-weight="700">法家之「法」：皇帝面前人人平等</text>
+                <text x="44" y="143" fill="#334155" font-size="12">• 皇帝定規矩且可隨時更改，眾生皆為奴才</text>
+                <text x="44" y="164" fill="#334155" font-size="12">• 商鞅「徙木立信」＝我說了算數（權力表演）</text>
+                <text x="44" y="185" fill="#334155" font-size="12">• 趙高「指鹿為馬」＝我說是什麼就是什麼</text>
+
+                <text x="320" y="156" text-anchor="middle" fill="#64748B" font-size="15" font-weight="800">≠</text>
+
+                <rect x="335" y="96" width="275" height="110" rx="8" fill="#F0FDFA" stroke="#5EEAD4"/>
+                <text x="472" y="119" text-anchor="middle" fill="#0F766E" font-size="13.5" font-weight="700">現代法治：法律面前人人平等</text>
+                <text x="349" y="145" fill="#334155" font-size="12">• 法律高於所有人，包括最高統治者</text>
+                <text x="349" y="167" fill="#334155" font-size="12">• 沒有人可以凌駕於法律之上</text>
+                <text x="349" y="189" fill="#0F766E" font-size="12" font-weight="600">• 限制權力任性，保護規則確定性</text>
+
+                <!-- Row 2: ART OF RULING -->
+                <rect x="16" y="236" width="608" height="170" rx="10" fill="#F8FAFC" stroke="#CBD5E1"/>
+                <rect x="16" y="236" width="608" height="36" rx="10" fill="#1E4270"/>
+                <text x="320" y="259" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">辨偽二：法家的「術」 ≠ 西方分權制衡 (Checks &amp; Balances)</text>
+
+                <rect x="30" y="284" width="275" height="108" rx="8" fill="#FEF7E8" stroke="#E0A84B"/>
+                <text x="167" y="307" text-anchor="middle" fill="#B4771E" font-size="13.5" font-weight="700">韓非之「術」：潛御群臣・分而治之</text>
+                <text x="44" y="331" fill="#334155" font-size="12">• 「藏之於胸中，以潛御群臣者也」</text>
+                <text x="44" y="352" fill="#334155" font-size="12">• 只制衡群臣，絕不制衡皇帝</text>
+                <text x="44" y="373" fill="#334155" font-size="12">• 讓大臣互相牽制，最終只有皇帝安全</text>
+
+                <text x="320" y="343" text-anchor="middle" fill="#64748B" font-size="15" font-weight="800">≠</text>
+
+                <rect x="335" y="284" width="275" height="108" rx="8" fill="#F0FDFA" stroke="#5EEAD4"/>
+                <text x="472" y="307" text-anchor="middle" fill="#0F766E" font-size="13.5" font-weight="700">西方三權分立：雙向制衡君主</text>
+                <text x="349" y="332" fill="#334155" font-size="12">• 核心目的正是防止最高執政權坐大</text>
+                <text x="349" y="354" fill="#334155" font-size="12">• 制度化公開制衡，非君主暗中操弄</text>
+                <text x="349" y="376" fill="#0F766E" font-size="12" font-weight="600">• 與法家防臣安君邏輯方向完全相反</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">法家「法術勢」服務於君主絕對安全與汲取能力，與現代法治毫無關聯</span>
+          <span class="page-num">09 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 10 : 秦制和平期高成本與十五年速崩 (版型 1：一對一論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="09 · 第三部：秦制困局（版型 1：一對一論法）"
+        data-title="秦制贏得戰時卻輸在和平期：失去上升出口加上無盡的官僚監督成本，導致短短十五年崩潰"
+        data-note-conclusion="秦制在和平時期的代理成本極高，而且是一條沒有盡頭的成本曲線：你用嚴刑峻法管百姓，但誰來管那些執行嚴刑峻法的官僚？"
+        data-note-evidence="兩條震撼一手史料：1. 荀子入秦觀察秦民「朴」「甚畏有司而順」，那是被嚴刑峻法馴化出的愚朴；2. 《商君書·徠民》秦臣奏折自認三晉地窄人擠卻不願移民地廣人稀的秦國，原因正是「秦士戚而民苦」——在秦國做讀書人很慘、老百姓太苦。"
+        data-note-transition="既然純靠法家「硬體」在和平期成本高到無法承受，後世帝國找到了什麼解方？">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">09 · PEACETIME COLLAPSE · 十五年速崩的經濟學</span>
+            <span class="slide-pacing">建議節奏 06:05–06:45</span>
+          </div>
+          <h2 class="action-title">秦制在和平期失去晉升出口且陷入<em>「無盡監督成本曲線」</em>，短短十五年崩潰</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-wide">
+            <!-- Cost Curve SVG -->
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <text x="340" y="26" text-anchor="middle" fill="#0B1F3A" font-size="16" font-weight="700">純秦制（純硬體）之代理成本反轉曲線</text>
+
+                <!-- Background zones -->
+                <rect x="70" y="50" width="265" height="275" fill="#F0FDFA" opacity="0.7"/>
+                <rect x="335" y="50" width="315" height="275" fill="#FEF2F2" opacity="0.7"/>
+                <line x1="335" y1="50" x2="335" y2="325" stroke="#0B1F3A" stroke-width="2" stroke-dasharray="6,4"/>
+
+                <text x="202" y="74" text-anchor="middle" fill="#0F766E" font-size="14" font-weight="700">戰爭時期（戰國競爭）</text>
+                <text x="202" y="94" text-anchor="middle" fill="#475569" font-size="11.5">尚有軍功晉升希望・秦制成本最低</text>
+
+                <text x="492" y="74" text-anchor="middle" fill="#B91C1C" font-size="14" font-weight="700">和平時期（大一統後）</text>
+                <text x="492" y="94" text-anchor="middle" fill="#475569" font-size="11.5">無上升通道・無小共同體庇護・監官失控</text>
+
+                <!-- Axes -->
+                <line x1="70" y1="325" x2="650" y2="325" stroke="#334155" stroke-width="2"/>
+                <line x1="70" y1="50" x2="70" y2="325" stroke="#334155" stroke-width="2"/>
+                <text x="34" y="190" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="700" transform="rotate(-90 34 190)">治理／代理總成本</text>
+
+                <!-- Zhou Line (Gray dashed) -->
+                <path d="M90,260 Q200,130 335,120" fill="none" stroke="#94A3B8" stroke-width="3" stroke-dasharray="7,5"/>
+                <text x="150" y="138" fill="#64748B" font-size="12" font-weight="700">周制（戰時成本暴增）</text>
+
+                <!-- Qin Line (Highlight Navy -> Crimson) -->
+                <path d="M90,270 Q210,275 335,255" fill="none" stroke="#0F766E" stroke-width="4"/>
+                <path d="M335,255 Q460,210 625,75" fill="none" stroke="#B91C1C" stroke-width="4.5"/>
+
+                <circle cx="335" cy="255" r="6" fill="#0B1F3A"/>
+                <text x="346" y="268" fill="#0B1F3A" font-size="12" font-weight="700">統一天下拐點</text>
+
+                <circle cx="618" cy="82" r="7" fill="#B91C1C"/>
+                <text x="530" y="128" fill="#B91C1C" font-size="13" font-weight="700">監督官僚仍需更多官僚</text>
+                <text x="530" y="147" fill="#B91C1C" font-size="12">（沒有盡頭的成本曲線 → 15 年崩）</text>
+
+                <!-- Bottom Dilemma Loop -->
+                <rect x="70" y="344" width="580" height="62" rx="8" fill="#0B1F3A"/>
+                <text x="360" y="370" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="700">深層死結：取消中間層後，皇帝必須親自監督龐大官僚集團</text>
+                <text x="360" y="392" text-anchor="middle" fill="#FFFFFF" font-size="12.5">官僚同樣有私利（偷懶、腐敗、欺上瞞下）➔ 誰來管執法者？僅靠大棒成本無窮大</text>
+              </svg>
+            </div>
+
+            <!-- Right: Primary Sources -->
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card navy-top">
+                <div class="card-label">PRIMARY WITNESS 01 · 荀子入秦</div>
+                <h3 class="card-title">被嚴刑峻法馴化出的「愚朴」</h3>
+                <ul class="mc-list">
+                  <li>荀子親赴秦國觀察，記載秦民<strong>「朴」「甚畏有司而順」</strong>。</li>
+                  <li>表面誇淳樸聽話，實則非天生淳樸，而是長期被嚴刑峻法高壓馴化、只知害怕官府而乖乖服從。</li>
+                </ul>
+              </div>
+
+              <div class="mc-card red-top" style="flex:1;">
+                <div class="card-label">PRIMARY WITNESS 02 · 《商君書·徠民》</div>
+                <h3 class="card-title">連秦國大臣都承認做秦民太苦</h3>
+                <ul class="mc-list">
+                  <li><strong>悖論</strong>：秦國土地遼闊、田宅有餘；三晉地狹人稠，理應民流向秦，卻不願前來。</li>
+                  <li><strong>秦臣自白</strong>：<strong>「秦士戚而民苦」</strong>——在秦國做讀書人很慘、做老百姓極苦，寧擠他國也不願入秦。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">純秦制「硬件」可複製但平和期監督成本無止境，單靠大棒必然失速崩盤</span>
+          <span class="page-num">10 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 11 : 裝上儒家軟體 — 儒表法裡與儒法國家 (版型 5：麥肯錫結構)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="10 · 第四部：裝上軟體（版型 5：系統架構）"
+        data-title="為壓低和平期執行成本，秦制必須裝上儒家「軟體」：以大棒配胡蘿蔔形成超穩定儒法國家"
+        data-note-conclusion="如果百姓從內心覺得應該服從，皇帝就不用派無窮無盡的官僚去壓迫他——這就是「秦始皇加孔夫子」的外儒內法體制。"
+        data-note-evidence="前面三招與嚴刑峻法屬於「硬件」（可操作、可複製，但執行成本極高）；儒家則是降低服從成本、提升執政合法性的「軟件」。法家是「大棒」（打一次管一次，成本極高），儒家是「胡蘿蔔」（讓人自己走，成本降下來）。引用趙鼎新《儒法國家》：正是這套結構解釋了中國長期維持大一統與超穩定結構。"
+        data-note-transition="但問題來了：漢武帝「罷黜百家、獨尊儒術」所獨尊的儒家，難道還是主張「從周」與「聞誅一夫紂」的先秦儒家嗎？">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">10 · CONFUCIAN-LEGALIST STATE · 外儒內法雙核系統</span>
+            <span class="slide-pacing">建議節奏 06:45–07:25</span>
+          </div>
+          <h2 class="action-title">秦制必須裝上儒家<em>「軟體」</em>降本：以「秦始皇加孔夫子」鑄成超穩定儒法國家</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2-left">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="mc-card navy-top">
+                <div class="card-label">METAPHOR · 大棒 vs. 胡蘿蔔</div>
+                <h3 class="card-title">為什麼光靠硬體不夠，還得裝軟體？</h3>
+                <ul class="mc-list">
+                  <li><strong>純法家大棒</strong>：打一次管一次，靠大量官僚監督百姓與彼此，成本極高。</li>
+                  <li><strong>加上儒家胡蘿蔔</strong>：用意識形態教化提升「執政合法性」與百姓「內心遵從性」，讓人自己願意走，監督成本驟降。</li>
+                </ul>
+              </div>
+
+              <div class="mc-card gold-top" style="flex:1;">
+                <div class="card-label">SCHOLARLY PROOF · 趙鼎新《儒法國家》</div>
+                <h3 class="card-title">中國長期大一統的結構密碼</h3>
+                <ul class="mc-list">
+                  <li>社會學家趙鼎新在《儒法國家》中論證：正是<strong>「外儒內法」</strong>（秦始皇加孔夫子）的雙核體制，讓中國在帝制時代形成長期大一統與<strong>超穩定結構</strong>。</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Dual Core System SVG -->
+            <div class="svg-box" style="padding:14px;">
+              <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+                <text x="320" y="26" text-anchor="middle" fill="#0B1F3A" font-size="16" font-weight="700">帝制「雙核作業系統」：法家硬體 × 儒家軟體</text>
+
+                <!-- Outer Shell: Confucian Software -->
+                <rect x="26" y="48" width="588" height="312" rx="16" fill="#FEF7E8" stroke="#C88A2E" stroke-width="2.5"/>
+                <text x="320" y="78" text-anchor="middle" fill="#B4771E" font-size="13" font-weight="800">外殼／表皮：儒家「軟體」（意識形態與倫理教化）</text>
+                <text x="320" y="100" text-anchor="middle" fill="#0B1F3A" font-size="14" font-weight="600">功能：提高執政合法性・塑造內心自願服從・大幅壓低強制執行成本</text>
+
+                <!-- Inner Core: Legalist Hardware -->
+                <rect x="64" y="122" width="512" height="214" rx="12" fill="#0B1F3A"/>
+                <text x="320" y="152" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="800">核心／骨肉：秦制法家「硬體」（底層權力結構）</text>
+                <text x="320" y="174" text-anchor="middle" fill="#CBD5E1" font-size="12.5">優點：高度可操作、可複製性極強，牢牢鎖定皇權與資源汲取</text>
+
+                <!-- 3 Hardware blocks inside -->
+                <rect x="86" y="196" width="144" height="62" rx="8" fill="#1E4270" stroke="#38BDF8" stroke-opacity="0.35"/>
+                <text x="158" y="223" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">編戶齊民</text>
+                <text x="158" y="244" text-anchor="middle" fill="#CBD5E1" font-size="11.5">拆散宗族・個體控制</text>
+
+                <rect x="248" y="196" width="144" height="62" rx="8" fill="#1E4270" stroke="#38BDF8" stroke-opacity="0.35"/>
+                <text x="320" y="223" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">郡縣官僚</text>
+                <text x="320" y="244" text-anchor="middle" fill="#CBD5E1" font-size="11.5">垂直任免・一竿子到底</text>
+
+                <rect x="410" y="196" width="144" height="62" rx="8" fill="#1E4270" stroke="#38BDF8" stroke-opacity="0.35"/>
+                <text x="482" y="223" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">嚴刑與法術</text>
+                <text x="482" y="244" text-anchor="middle" fill="#CBD5E1" font-size="11.5">兜底威懾・潛御群臣</text>
+
+                <text x="320" y="308" text-anchor="middle" fill="#FDE6B8" font-size="14.5" font-weight="700">「秦制是骨肉，儒家是表皮」＝ 秦始皇 ＋ 孔夫子</text>
+
+                <!-- Bottom Result -->
+                <rect x="26" y="374" width="588" height="34" rx="7" fill="#1E4270"/>
+                <text x="320" y="396" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">結果：兩者互補降低和平期代理成本，形成維持兩千年的「儒法國家」</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">法家硬體給與控制骨幹，儒家軟體降低服從摩擦，兩者結合方能長治久安</span>
+          <span class="page-num">11 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 12 : 被改造的儒與法道互補 (版型 4：連鎖譜系圖)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="11 · 第四部：儒家改造與法道互補（版型 4：連鎖論法）"
+        data-title="漢武帝獨尊的已非古典儒學，而是把「甜酒澆在獨角獸上」的儒法合流與「法道互補」"
+        data-note-conclusion="儒法本來就非涇渭分明：從荀子到韓非、李斯，再到漢初叔孫通「將甜酒澆在獨角獸身上」，才造就秦制真正容得下的官學「儒」；同時道家也被改造成潤滑劑。"
+        data-note-evidence="細節：1. 古文經學家認周公為儒家創始人，今文經學家認孔子；2. 孔子後儒家分裂為思孟「從周」古典儒與荀子「法後王」（韓非、李斯為荀子徒弟）；3. 秦暉詞源考據：「禮」本義是甜酒，「法」本義是獨角獸獬豸，叔孫通製禮等於把甜酒澆在獨角獸上哄你喝、底下頂著你；4. 老子本意是上位無為（「我無為而民自化」），秦制下變成下位犬儒（「在上者指鹿為馬，在下者難得糊塗」）。堯舜禹「禪讓」亦多屬後人建構。"
+        data-note-transition="帶著這套「法家骨肉＋儒家表皮＋道家潤滑劑」的底層代碼，我們就能解讀三個最令人困惑的歷史現象。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">11 · IDEOLOGICAL REMIX · 儒法合流譜系與三套軟體</span>
+            <span class="slide-pacing">建議節奏 07:25–08:05</span>
+          </div>
+          <h2 class="action-title">獨尊的儒術實為<em>「甜酒澆在獨角獸上」</em>；法・儒・道各司其職構成「法道互補」</h2>
+        </div>
+
+        <div class="slide-body" style="gap:14px;">
+          <!-- Lineage Evolution SVG -->
+          <div class="svg-box" style="height:226px;padding:12px 16px;">
+            <svg viewBox="0 0 1140 198" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+              <defs>
+                <marker id="s12-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M0,1 L9,5 L0,9 z" fill="#0B1F3A"/>
+                </marker>
+              </defs>
+              <text x="16" y="22" fill="#0B1F3A" font-size="14.5" font-weight="700">思想演化譜系：先秦「從周」古典儒學如何被改造成秦制可用的「儒表法裡」？</text>
+
+              <!-- Node 1 -->
+              <rect x="16" y="42" width="195" height="106" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+              <text x="113" y="68" text-anchor="middle" fill="#0B1F3A" font-size="13.5" font-weight="700">先秦儒家淵源</text>
+              <text x="113" y="92" text-anchor="middle" fill="#475569" font-size="12">古文經：周公創始</text>
+              <text x="113" y="112" text-anchor="middle" fill="#475569" font-size="12">今文經：孔子創始</text>
+              <text x="113" y="134" text-anchor="middle" fill="#64748B" font-size="11">(禪讓多屬後人建構想像)</text>
+
+              <!-- Split Arrows -->
+              <line x1="211" y1="74" x2="256" y2="62" stroke="#94A3B8" stroke-width="2" marker-end="url(#s12-arr)"/>
+              <line x1="211" y1="112" x2="256" y2="124" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s12-arr)"/>
+
+              <!-- Branch A: Dead end for Qin -->
+              <rect x="262" y="38" width="230" height="52" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+              <text x="377" y="60" text-anchor="middle" fill="#64748B" font-size="13" font-weight="700">思孟學派（從周・權責對應）</text>
+              <text x="377" y="79" text-anchor="middle" fill="#B91C1C" font-size="11.5">主張君不君可換之 ➔ 秦制絕不容納</text>
+
+              <!-- Branch B: Xunzi -> Legalists -->
+              <rect x="262" y="100" width="230" height="62" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="1.8"/>
+              <text x="377" y="123" text-anchor="middle" fill="#0B1F3A" font-size="13.5" font-weight="700">荀子路線（法後王）</text>
+              <text x="377" y="144" text-anchor="middle" fill="#B4771E" font-size="12" font-weight="600">外表儒家，骨子法家</text>
+
+              <line x1="492" y1="131" x2="536" y2="131" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s12-arr)"/>
+
+              <!-- Node 3: Han Fei & Li Si -->
+              <rect x="542" y="88" width="205" height="84" rx="8" fill="#1E4270"/>
+              <text x="644" y="114" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="700">師徒三代從儒到法</text>
+              <text x="644" y="138" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">韓非子 ＆ 李斯</text>
+              <text x="644" y="159" text-anchor="middle" fill="#CBD5E1" font-size="11.5">直接成為法家核心代表</text>
+
+              <line x1="747" y1="131" x2="788" y2="131" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s12-arr)"/>
+
+              <!-- Node 4: Shusun Tong & Emperor Wu -->
+              <rect x="794" y="42" width="330" height="142" rx="10" fill="#0B1F3A" stroke="#C88A2E" stroke-width="2"/>
+              <text x="959" y="70" text-anchor="middle" fill="#E0A84B" font-size="13.5" font-weight="700">漢初叔孫通製禮 ➔ 漢武帝獨尊儒術</text>
+              <text x="959" y="96" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="600">「禮」本義＝甜酒 ｜ 「法」本義＝獬豸（獨角獸）</text>
+              <rect x="814" y="110" width="290" height="58" rx="6" fill="rgba(255,255,255,0.08)"/>
+              <text x="959" y="133" text-anchor="middle" fill="#FDE6B8" font-size="12.5" font-weight="700">把甜酒澆在獨角獸身上：</text>
+              <text x="959" y="154" text-anchor="middle" fill="#CBD5E1" font-size="12">喝下去覺得甜，底下頂著你的是角（儒表法裡）</text>
+            </svg>
+          </div>
+
+          <!-- 3-Software Division of Labor -->
+          <div class="grid-3">
+            <div class="mc-card navy-top">
+              <div class="card-label">SYSTEM 01 · 骨肉</div>
+              <h3 class="card-title">法家：管「硬控制」</h3>
+              <p style="margin:0;font-size:13.5px;color:#475569;line-height:1.55;">
+                負責郡縣官僚體制、戶籍控制與刑罰威懾，是支撐大一統帝國不致分崩離析的實權骨架。
+              </p>
+            </div>
+
+            <div class="mc-card gold-top">
+              <div class="card-label">SYSTEM 02 · 表皮</div>
+              <h3 class="card-title">儒家：管「軟包裝」</h3>
+              <p style="margin:0;font-size:13.5px;color:#475569;line-height:1.55;">
+                以三綱倫理重塑「忠」的含義，提供統治正當性與道德甜酒，大幅降低日常行政服從成本。
+              </p>
+            </div>
+
+            <div class="mc-card teal-top">
+              <div class="card-label">SYSTEM 03 · 潤滑劑（法道互補）</div>
+              <h3 class="card-title">道家：管「心理調適」</h3>
+              <p style="margin:0;font-size:13.5px;color:#475569;line-height:1.55;">
+                老子本意是上位者無為；秦制卻將其轉化為下位「犬儒」：<strong>「在上者指鹿為馬，在下者難得糊塗。」</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">漢武帝後是法家管控制、儒家管包裝、道家管心理調適的三位一體「法道互補」</span>
+          <span class="page-num">12 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 13 : 三大歷史現象的統一解釋 (版型 2：並列論法)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="12 · 第四部：歷史現象解碼（版型 2：並列論法）"
+        data-title="「儒表法裡」底層代碼能穿透解讀科舉本質、漢唐商品經濟悖論與王朝集分擺盪"
+        data-note-conclusion="許多看似矛盾的歷史現象，一旦放進「代理成本 × 儒表法裡」框架，立刻豁然開朗。"
+        data-note-evidence="1. 科舉考儒家經典，實為法家式量化測試：不考獨立見解，只考精確複述與格式，選的是「最會服從的人」。2. 漢朝普遍用黃金、市場利率低於後世、借貸繁盛，商品經濟遠超多用綢緞的唐朝——因為漢完整繼承秦文法吏基層「抑豪強」，自耕農占多數（人與人之間是座孤島），繁榮實為強控制的副產品。3. 中國存在「集權-分權鐘擺」：秦集權亡→西漢初分權黃老→七王之亂→漢武帝重回集權，在硬體監督成本與代理人控制權損失間來回擺盪。"
+        data-note-transition="把前面全部脈絡收攏成一張完整的因果圖，我們會看見一個貫穿兩千年的結構死結。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">12 · HISTORICAL ANOMALIES DECODED · 三大歷史悖論驗證</span>
+            <span class="slide-pacing">建議節奏 08:05–08:45</span>
+          </div>
+          <h2 class="action-title">以「儒表法裡」底層代碼，一次穿透<em>科舉、漢唐經濟悖論與集權分權鐘擺</em></h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-3">
+            <!-- Phenomenon 1 -->
+            <div class="mc-card navy-top" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">PHENOMENON 01 · 選官制度</div>
+                <h3 class="card-title">科舉：儒家外衣下的法家篩選</h3>
+                <ul class="mc-list">
+                  <li><strong>表面誤解</strong>：考儒家經典，看似純粹儒家制度。</li>
+                  <li><strong>秦暉洞察</strong>：考的不是獨立見解，而是能否精確複述經典、按格式寫文章。</li>
+                  <li><strong>真實功能</strong>：一種量化測試<strong>服從性</strong>的方法——不是選有德有才者，而是選<strong>最會服從的人</strong>。</li>
+                </ul>
+              </div>
+              <div class="callout-gold">
+                <strong>本質定位：</strong>量化考績服從度，比鄉舉里選更接近法家控制邏輯。
+              </div>
+            </div>
+
+            <!-- Phenomenon 2 -->
+            <div class="mc-card gold-top" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">PHENOMENON 02 · 經濟悖論</div>
+                <h3 class="card-title">漢朝商品經濟為何遠超唐朝？</h3>
+                <ul class="mc-list">
+                  <li><strong>反直覺史實</strong>：漢朝普遍用<strong>黃金</strong>貨幣，利率遠低於後世、借貸繁盛；唐朝反而多用綢緞，黃金退出流通。</li>
+                  <li><strong>制度真相</strong>：漢完整繼承秦代文法吏基層，「抑豪強」使自耕農占多數。</li>
+                  <li><strong>深層原因</strong>：保障「人與人之間是座孤島」的強控制體制，意外催生發達商品經濟副產品。</li>
+                </ul>
+              </div>
+              <div class="callout-gold">
+                <strong>顛覆常識：</strong>漢代繁榮並非自由放任結果，而是秦制基層穿透力的副產品。
+              </div>
+            </div>
+
+            <!-- Phenomenon 3 -->
+            <div class="mc-card navy-top" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">PHENOMENON 03 · 鐘擺效應</div>
+                <h3 class="card-title">集權—分權的兩千年擺盪</h3>
+                <svg viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif" style="width:100%;height:124px;margin:4px 0 8px;">
+                  <line x1="160" y1="8" x2="105" y2="78" stroke="#C88A2E" stroke-width="2.5" stroke-dasharray="4,3"/>
+                  <line x1="160" y1="8" x2="215" y2="78" stroke="#1E4270" stroke-width="2.5"/>
+                  <circle cx="160" cy="8" r="5" fill="#0B1F3A"/>
+                  <rect x="14" y="76" width="132" height="44" rx="6" fill="#FEF7E8" stroke="#C88A2E"/>
+                  <text x="80" y="96" text-anchor="middle" fill="#B4771E" font-size="12" font-weight="700">過度集權（秦/漢武）</text>
+                  <text x="80" y="113" text-anchor="middle" fill="#475569" font-size="10.5">官僚硬體成本極高</text>
+                  <rect x="174" y="76" width="132" height="44" rx="6" fill="#F1F5F9" stroke="#1E4270"/>
+                  <text x="240" y="96" text-anchor="middle" fill="#0B1F3A" font-size="12" font-weight="700">過度分權（漢初黃老）</text>
+                  <text x="240" y="113" text-anchor="middle" fill="#475569" font-size="10.5">七王之亂・控制權損失</text>
+                  <path d="M120,66 Q160,84 200,66" fill="none" stroke="#B91C1C" stroke-width="2"/>
+                </svg>
+                <p style="margin:0;font-size:13px;color:#475569;line-height:1.5;">
+                  前朝過度集權而亡 ➔ 新朝偏向分權 ➔ 代理人坐大（七王之亂）➔ 再轉回集權，在兩種成本間權衡擺盪。
+                </p>
+              </div>
+              <div class="callout-navy">
+                <strong>集久必分，分久必集：</strong>本質是「硬體監督成本」與「控制權損失」的動態拉扯。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">三組歷史異象皆源自「降低代理成本」與「儒表法裡」的制度約束</span>
+          <span class="page-num">13 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 14 : 章節脈絡串聯與兩千年死結 (版型 4：因果閉環總圖)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="13 · 章節脈絡串聯（版型 4：因果總圖）"
+        data-title="周秦之變構成完整因果鏈，卻留下「既離不開官僚又不信任官僚」的兩千年無解死結"
+        data-note-conclusion="把四個部分串起來看：秦制贏了戰爭、卻解不開和平期的代理死結，只能靠儒表與道家把結構鎖死，在集權與分權之間反覆擺盪兩千年。"
+        data-note-evidence="康有為曾稱秦朝開闢「自由平等」時代——某種意義沒說錯，因為它打破貴族等級；但這是「做奴才的平等」，而非「做人的平等」。皇帝面前人人平等，但皇帝可對任何人生殺予奪，平等地受壓迫不是真正的平等。"
+        data-note-transition="最後一頁，我們將這套歷史制度視角濃縮為三大核心收穫，以及自己與團隊能立即應用的分析工具。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">13 · CAUSAL SYNTHESIS · 全書論證脈絡與死結</span>
+            <span class="slide-pacing">建議節奏 08:45–09:25</span>
+          </div>
+          <h2 class="action-title">完整因果鏈揭示兩千年死結：<em>既離不開官僚，又不信任官僚</em>；所謂平等乃奴才的平等</h2>
+        </div>
+
+        <div class="slide-body" style="gap:14px;">
+          <div class="svg-box" style="flex:1;padding:14px;">
+            <svg viewBox="0 0 1140 310" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans TC', sans-serif">
+              <defs>
+                <marker id="s14-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M0,1 L9,5 L0,9 z" fill="#C88A2E"/>
+                </marker>
+              </defs>
+
+              <!-- 5-Step Causal Chain -->
+              <rect x="14" y="24" width="194" height="128" rx="8" fill="#F8FAFC" stroke="#1E4270" stroke-width="1.6"/>
+              <text x="111" y="50" text-anchor="middle" fill="#1E4270" font-size="12" font-weight="800">前提 1</text>
+              <text x="111" y="74" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">戰國持久戰</text>
+              <text x="111" y="98" text-anchor="middle" fill="#475569" font-size="12">周制打包委託在戰時</text>
+              <text x="111" y="116" text-anchor="middle" fill="#475569" font-size="12">出現道德風險與動員低效</text>
+              <text x="111" y="138" text-anchor="middle" fill="#B4771E" font-size="11.5" font-weight="700">➔ 逼出低成本替代制度</text>
+
+              <line x1="212" y1="88" x2="238" y2="88" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s14-arr)"/>
+
+              <rect x="242" y="24" width="194" height="128" rx="8" fill="#FEF7E8" stroke="#C88A2E" stroke-width="1.8"/>
+              <text x="339" y="50" text-anchor="middle" fill="#B4771E" font-size="12" font-weight="800">前提 2</text>
+              <text x="339" y="74" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">秦制硬體勝出</text>
+              <text x="339" y="98" text-anchor="middle" fill="#475569" font-size="12">編戶齊民＋軍功＋以吏為師</text>
+              <text x="339" y="116" text-anchor="middle" fill="#475569" font-size="12">取消中間層壓低戰時成本</text>
+              <text x="339" y="138" text-anchor="middle" fill="#B4771E" font-size="11.5" font-weight="700">➔ 統一六國建立帝制</text>
+
+              <line x1="440" y1="88" x2="466" y2="88" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s14-arr)"/>
+
+              <rect x="470" y="24" width="194" height="128" rx="8" fill="#FEF2F2" stroke="#B91C1C" stroke-width="1.6"/>
+              <text x="567" y="50" text-anchor="middle" fill="#B91C1C" font-size="12" font-weight="800">轉折危機</text>
+              <text x="567" y="74" text-anchor="middle" fill="#0B1F3A" font-size="14.5" font-weight="700">和平期成本爆表</text>
+              <text x="567" y="98" text-anchor="middle" fill="#475569" font-size="12">失去軍功出口且「秦士戚而</text>
+              <text x="567" y="116" text-anchor="middle" fill="#475569" font-size="12">民苦」；監督官僚無止境</text>
+              <text x="567" y="138" text-anchor="middle" fill="#B91C1C" font-size="11.5" font-weight="700">➔ 純秦制十五年速崩</text>
+
+              <line x1="668" y1="88" x2="694" y2="88" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s14-arr)"/>
+
+              <rect x="698" y="24" width="194" height="128" rx="8" fill="#1E4270"/>
+              <text x="795" y="50" text-anchor="middle" fill="#E0A84B" font-size="12" font-weight="800">制度補丁</text>
+              <text x="795" y="74" text-anchor="middle" fill="#FFFFFF" font-size="14.5" font-weight="700">儒表法裡＋道潤滑</text>
+              <text x="795" y="98" text-anchor="middle" fill="#CBD5E1" font-size="12">法家骨肉配儒家甜酒教化</text>
+              <text x="795" y="116" text-anchor="middle" fill="#CBD5E1" font-size="12">壓低和平期服從監督成本</text>
+              <text x="795" y="138" text-anchor="middle" fill="#E0A84B" font-size="11.5" font-weight="700">➔ 形成兩千年超穩定結構</text>
+
+              <line x1="896" y1="88" x2="922" y2="88" stroke="#C88A2E" stroke-width="2.5" marker-end="url(#s14-arr)"/>
+
+              <rect x="926" y="24" width="200" height="128" rx="8" fill="#0B1F3A" stroke="#C88A2E" stroke-width="2"/>
+              <text x="1026" y="50" text-anchor="middle" fill="#E0A84B" font-size="12" font-weight="800">最終死結</text>
+              <text x="1026" y="76" text-anchor="middle" fill="#FFFFFF" font-size="14.5" font-weight="700">鐘擺反覆無解</text>
+              <text x="1026" y="100" text-anchor="middle" fill="#FDE6B8" font-size="12.5" font-weight="700">既離不開官僚，</text>
+              <text x="1026" y="119" text-anchor="middle" fill="#FDE6B8" font-size="12.5" font-weight="700">又不信任官僚</text>
+              <text x="1026" y="140" text-anchor="middle" fill="#CBD5E1" font-size="11.5">➔ 集權與分權永遠擺盪</text>
+
+              <!-- Bottom Kang Youwei Critique -->
+              <rect x="14" y="176" width="1112" height="118" rx="10" fill="#F8FAFC" stroke="#0B1F3A" stroke-width="1.5"/>
+              <rect x="14" y="176" width="230" height="118" rx="10" fill="#0B1F3A"/>
+              <text x="129" y="226" text-anchor="middle" fill="#E0A84B" font-size="13" font-weight="700">康有為命題再審視</text>
+              <text x="129" y="252" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">秦制帶來的「平等」</text>
+
+              <text x="270" y="212" fill="#0B1F3A" font-size="14.5" font-weight="700">打破貴族等級，卻不是現代意義的公民平等：</text>
+              <text x="270" y="242" fill="#334155" font-size="13.5">• 康有為稱秦朝開闢自由平等時代——某種意義沒說錯，它確實消滅了貴族世襲特權。</text>
+              <text x="270" y="268" fill="#B91C1C" font-size="13.5" font-weight="700">• 但這是「做奴才的平等」，而非「做人的平等」：皇帝可對任何人生殺予奪，平等地受壓迫不是真平等。</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">兩千年帝制的真實面貌，是在官僚不可免卻又不可信之間反覆擺盪</span>
+          <span class="page-num">14 / 15</span>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SLIDE 15 : 總結與即刻行動指南 (版型 2：三大洞見＋可落地診斷)
+           ================================================================ -->
+      <section class="slide"
+        data-kicker="14 · 總結與落地行動（版型 2：並列收斂）"
+        data-title="掌握「周秦之變」三重洞見，立即將「追問制度來路 ✕ 代理成本診斷」應用於讀史與組織治理"
+        data-note-conclusion="理解周秦之變，就理解了中國兩千年帝制的底層代碼——不是帝王將相個人故事，而是制度的來路與去路。"
+        data-note-evidence="聶輝華總結：秦暉這本書真正的價值，不在於給出多少確定答案，而在於教會讀者如何追問——追問制度的來路，追問思想的生態位，追問「理所當然」背後的「所以然」。"
+        data-note-transition="（簡報結束）歡迎回到首頁使用「委託-代理四維診斷器」記錄團隊實戰洞察並同步至 Supabase。">
+        <div class="slide-header">
+          <div class="slide-kicker-row">
+            <span class="slide-kicker">14 · EXECUTIVE SUMMARY &amp; ACTION · 全書總結與團隊行動</span>
+            <span class="slide-pacing">建議節奏 09:25–10:00</span>
+          </div>
+          <h2 class="action-title">掌握「周秦之變」三大洞見，以<em>「追問制度來路 ✕ 代理診斷」</em>指導讀史與團隊治理</h2>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2">
+            <!-- Left: 3 Key Takeaways -->
+            <div class="mc-card navy-top" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">KEY TAKEAWAYS · 全書精華濃縮</div>
+                <h3 class="card-title">《秦漢史講義》必須帶走的三個核心結論</h3>
+                <ul class="mc-list">
+                  <li><strong>1. 周秦之變是結構轉型</strong>：從血緣小共同體的「打包委託（分封）」，轉向取消中間層的「直管制（郡縣官僚）」，由戰時代理成本勝出驅動。</li>
+                  <li><strong>2. 秦制硬體三招各有代價</strong>：編戶齊民、軍功制（激勵相容）、以吏為師（強謹）贏了戰爭，卻因性惡假設與無止境監官成本在和平期崩潰。</li>
+                  <li><strong>3. 儒表法裡與法道互補</strong>：法家骨肉＋儒家甜酒＋道家犬儒構築兩千年大一統，但始終鎖在「集權—分權鐘擺」的死結之中。</li>
+                </ul>
+              </div>
+              <div class="callout-gold">
+                <strong>全書最高價值：</strong>學會追問「制度的來路」、「思想的生態位」，以及看似「理所當然」背後的「所以然」。
+              </div>
+            </div>
+
+            <!-- Right: Immediate Action -->
+            <div class="mc-card dark" style="justify-content:space-between;">
+              <div>
+                <div class="card-label">IMMEDIATE ACTION · 讀完這本書立刻能做的一件事</div>
+                <h3 class="card-title">用「委託-代理四維清單」體檢團隊與制度</h3>
+                <ul class="mc-list">
+                  <li><strong>① 檢視代理鏈條</strong>：盤點組織中指令從決策層到第一線經過幾層？哪些中間層產生走樣與修飾，哪些直管反而造成上層超載？</li>
+                  <li><strong>② 對齊激勵相容</strong>：成員的回報機制（如軍功制）是否真與核心目標一致？還是仍在靠「強謹服從」造成逆向選擇？</li>
+                  <li><strong>③ 校準硬體 vs. 軟體配比</strong>：避免只靠嚴格稽核 KPI（純大棒高成本），也避免只談口號（缺硬約束失控），建立低摩擦治理共識。</li>
+                </ul>
+              </div>
+              <div style="padding:12px 14px;border-radius:8px;background:rgba(200,138,46,0.2);border:1px solid rgba(224,168,75,0.45);font-size:13px;color:#FDE6B8;">
+                <strong>下一步行動：</strong>返回首頁開啟「委託-代理四維診斷器」，填寫本週案例並同步至 Supabase 團隊共學紀錄牆。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span class="slide-takeaway">讀史不是背年代，而是用政治經濟學透視人類組織永恆的委託-代理難題</span>
+          <span class="page-num">15 / 15</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 3-Part Speaker Notes Drawer -->
+  <aside class="notes-drawer" id="notes-drawer" aria-label="三段式講者備忘稿">
+    <div class="notes-header">
+      <span id="notes-slide-label">Slide 01 / 15</span>
+      <button type="button" id="notes-close" style="background:none;border:none;color:#E0A84B;font-weight:700;cursor:pointer;">收合講稿 (N) ✕</button>
+    </div>
+    <div class="notes-grid">
+      <div class="note-col">
+        <h4>① 本頁結論</h4>
+        <p id="note-conclusion"></p>
+      </div>
+      <div class="note-col">
+        <h4>② 補充說明（嚴守原文，無幻覺）</h4>
+        <p id="note-evidence"></p>
+      </div>
+      <div class="note-col">
+        <h4>③ 下一頁轉場</h4>
+        <p id="note-transition"></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Slide Grid Overview & Search Modal -->
+  <div class="grid-overlay" id="grid-overlay" role="dialog" aria-modal="true" aria-label="投影片總覽與頁內檢索">
+    <div class="grid-overlay-head">
+      <div>
+        <strong style="font-size:18px;">投影片總覽與頁內快速檢索</strong>
+        <span style="font-size:13px;color:rgba(255,255,255,0.65);margin-left:10px;">點擊任一卡片直接跳轉</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input type="search" id="grid-filter-input" class="grid-filter-input" placeholder="篩選投影片關鍵字（例：軍功制、井田、甜酒）..." />
+        <button type="button" class="ctrl-btn" id="grid-close">關閉 (Esc)</button>
+      </div>
+    </div>
+    <div class="thumbs-grid" id="thumbs-grid"></div>
+  </div>
+
+  <script src="../assets/js/deck.js"></script>
+</body>
+</html>

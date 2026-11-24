@@ -1,0 +1,567 @@
+/* ==========================================================================
+   McKinsey Executive 16:9 Presentation Engine — Stylesheet
+   Canvas: 1280 x 720 (Scaled seamlessly to viewport)
+   Palette: Deep Navy (#0B1F3A) | Slate Gray (#475569 / #F8FAFC) | Amber Gold (#C88A2E)
+   ========================================================================== */
+
+:root {
+  --navy-950: #071426;
+  --navy-900: #0B1F3A;
+  --navy-800: #132E52;
+  --navy-700: #1E4270;
+  --slate-900: #0F172A;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748B;
+  --slate-300: #CBD5E1;
+  --slate-200: #E2E8F0;
+  --slate-100: #F1F5F9;
+  --slate-50: #F8FAFC;
+  --gold-600: #B4771E;
+  --gold-500: #C88A2E;
+  --gold-400: #E0A84B;
+  --gold-100: #FEF7E8;
+  --teal-700: #0F766E;
+  --teal-50: #F0FDFA;
+  --red-700: #B91C1C;
+  --red-50: #FEF2F2;
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, sans-serif;
+  --font-serif: "Noto Serif TC", "Songti TC", Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-sans);
+  background: #0D1726;
+  color: var(--slate-900);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Top Deck Toolbar ---------- */
+.deck-topbar {
+  height: 54px;
+  background: rgba(7, 20, 38, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 14px;
+  position: relative;
+  z-index: 40;
+}
+
+.deck-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+
+.btn-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.btn-back-home:hover { border-color: var(--gold-400); color: var(--gold-400); }
+
+.deck-title-bar {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deck-title-bar span { color: var(--gold-400); margin-right: 6px; }
+.deck-controls { display: flex; align-items: center; gap: 8px; }
+
+.ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 11px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.ctrl-btn:hover, .ctrl-btn.active {
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  color: #fff;
+}
+
+.slide-counter {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FDE6B8;
+  padding: 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-pill {
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: rgba(200, 138, 46, 0.18);
+  border: 1px solid rgba(224, 168, 75, 0.35);
+  color: #FDE6B8;
+  cursor: pointer;
+}
+
+/* ---------- Progress Bar ---------- */
+.progress-track { height: 3px; background: rgba(255, 255, 255, 0.08); width: 100%; position: relative; z-index: 35; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold-500), #F5C369); width: 6.67%; transition: width 0.25s ease; }
+
+/* ---------- Main Stage Viewport ---------- */
+.stage-wrapper {
+  height: calc(100vh - 57px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px 56px;
+  transition: padding-bottom 0.25s ease;
+}
+
+body.notes-open .stage-wrapper { height: calc(100vh - 237px); }
+
+.stage-scaler {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  transform-origin: center center;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 68px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(11, 31, 58, 0.72);
+  color: #fff;
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 30;
+  transition: all 0.15s;
+}
+
+.nav-arrow:hover { background: var(--gold-500); border-color: var(--gold-500); }
+.nav-arrow:disabled { opacity: 0.25; cursor: default; pointer-events: none; }
+.nav-prev { left: 10px; }
+.nav-next { right: 10px; }
+
+/* ---------- Individual 16:9 Slide ---------- */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 1280px;
+  height: 720px;
+  background: #FFFFFF;
+  display: none;
+  flex-direction: column;
+  padding: 34px 48px 26px;
+  overflow: hidden;
+}
+
+.slide.active { display: flex; animation: slideFade 0.22s ease-out; }
+
+@keyframes slideFade {
+  from { opacity: 0.35; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-header {
+  border-bottom: 2px solid var(--navy-900);
+  padding-bottom: 11px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.slide-kicker-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+
+.slide-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+.slide-pacing {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--slate-500);
+  background: var(--slate-100);
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.action-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 23px;
+  line-height: 1.32;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.action-title em { font-style: normal; color: var(--gold-600); }
+
+.slide-body { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+.slide-footer {
+  margin-top: 12px;
+  padding-top: 9px;
+  border-top: 1px solid var(--slate-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--slate-500);
+  flex-shrink: 0;
+}
+
+.slide-takeaway { color: var(--navy-900); font-weight: 700; }
+.slide-takeaway::before { content: "KEY TAKEAWAY｜"; color: var(--gold-600); font-weight: 800; }
+
+.page-num {
+  font-weight: 700;
+  color: var(--navy-900);
+  background: var(--slate-100);
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+/* ---------- Cover Slide ---------- */
+.slide-cover {
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 56%, #14365E 100%);
+  color: #fff;
+  padding: 46px 56px;
+}
+
+.cover-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.32fr 0.78fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cover-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(200, 138, 46, 0.18);
+  border: 1px solid rgba(224, 168, 75, 0.45);
+  color: #F7D48F;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.cover-title {
+  margin: 0 0 10px;
+  font-family: var(--font-serif);
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+}
+
+.cover-subtitle {
+  margin: 0 0 24px;
+  font-size: 23px;
+  color: var(--gold-400);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.cover-thesis {
+  margin: 0 0 28px;
+  padding: 18px 22px;
+  border-left: 4px solid var(--gold-500);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0 10px 10px 0;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cover-four-badges { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+.cover-badge {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.cover-badge strong { display: block; font-size: 17px; color: var(--gold-400); margin-bottom: 2px; }
+.cover-badge span { font-size: 12px; color: rgba(255, 255, 255, 0.74); }
+
+.cover-book-mockup {
+  position: relative;
+  border-radius: 10px 16px 16px 10px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: 550px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 390px;
+  box-shadow: -16px 24px 56px rgba(0, 0, 0, 0.55), inset 8px 0 14px rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 28px;
+  border: 1px solid rgba(224, 168, 75, 0.32);
+}
+
+.cover-book-mockup img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+.cover-book-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 20, 38, 0.85) 0%, rgba(7, 20, 38, 0.14) 36%, rgba(7, 20, 38, 0.16) 66%, rgba(7, 20, 38, 0.9) 100%);
+  z-index: 2;
+}
+
+.cover-book-top, .cover-book-bottom { position: relative; z-index: 3; }
+
+/* ---------- Reusable McKinsey Slide Layouts ---------- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; flex: 1; min-height: 0; }
+.grid-2-wide { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 24px; flex: 1; min-height: 0; }
+.grid-2-left { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 24px; flex: 1; min-height: 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; flex: 1; min-height: 0; }
+
+.mc-card {
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mc-card.navy-top { border-top: 4px solid var(--navy-900); background: #fff; }
+.mc-card.gold-top { border-top: 4px solid var(--gold-500); background: #fff; }
+.mc-card.teal-top { border-top: 4px solid var(--teal-700); background: #fff; }
+.mc-card.red-top { border-top: 4px solid var(--red-700); background: #fff; }
+.mc-card.dark { background: var(--navy-900); color: #fff; border-color: var(--navy-900); }
+
+.card-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+  margin-bottom: 5px;
+}
+
+.mc-card.dark .card-label { color: var(--gold-400); }
+
+.card-title { margin: 0 0 9px; font-size: 16.5px; font-weight: 700; color: var(--navy-900); line-height: 1.35; }
+.mc-card.dark .card-title { color: #fff; }
+
+.mc-list { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.58; color: var(--slate-700); }
+.mc-list li { margin-bottom: 6px; }
+.mc-list strong { color: var(--navy-900); }
+.mc-card.dark .mc-list { color: rgba(255,255,255,0.85); }
+.mc-card.dark .mc-list strong { color: var(--gold-400); }
+
+.svg-box {
+  background: #FFFFFF;
+  border: 1px solid var(--slate-200);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.svg-box svg { width: 100%; height: 100%; max-height: 100%; display: block; }
+
+.callout-gold {
+  margin-top: auto;
+  padding: 10px 14px;
+  background: var(--gold-100);
+  border-left: 4px solid var(--gold-500);
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: var(--navy-900);
+  line-height: 1.5;
+}
+
+.callout-navy {
+  margin-top: auto;
+  padding: 11px 15px;
+  background: var(--navy-900);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.callout-navy strong { color: var(--gold-400); }
+
+.mc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.mc-table th { background: var(--navy-900); color: #fff; text-align: left; padding: 8px 11px; font-weight: 700; }
+.mc-table td { padding: 8px 11px; border-bottom: 1px solid var(--slate-200); vertical-align: top; color: var(--slate-700); }
+.mc-table tr:nth-child(even) td { background: var(--slate-50); }
+.mc-table td strong { color: var(--navy-900); }
+
+/* ---------- Speaker Notes Drawer ---------- */
+.notes-drawer {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 180px;
+  background: #0A1628;
+  border-top: 2px solid var(--gold-500);
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+}
+
+body.notes-open .notes-drawer { transform: translateY(0); }
+
+.notes-header {
+  padding: 8px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--gold-400);
+  font-weight: 700;
+}
+
+.notes-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr 0.85fr;
+  gap: 18px;
+  padding: 12px 24px;
+  overflow-y: auto;
+}
+
+.note-col {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.note-col h4 { margin: 0 0 5px; font-size: 12px; color: var(--gold-400); letter-spacing: 0.04em; }
+.note-col p { margin: 0; font-size: 13px; line-height: 1.55; color: rgba(255, 255, 255, 0.88); }
+
+/* ---------- Slide Grid Overview Modal ---------- */
+.grid-overlay {
+  position: fixed;
+  inset: 54px 0 0 0;
+  background: rgba(7, 20, 38, 0.96);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  display: none;
+  flex-direction: column;
+  padding: 24px 36px;
+  overflow-y: auto;
+}
+
+.grid-overlay.open { display: flex; }
+
+.grid-overlay-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 18px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.grid-filter-input {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 13.5px;
+  width: 300px;
+  outline: none;
+}
+
+.grid-filter-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+.thumbs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+.thumb-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+
+.thumb-card:hover { transform: translateY(-2px); border-color: var(--gold-400); }
+.thumb-card.current { border-color: var(--gold-500); box-shadow: 0 0 0 3px rgba(200, 138, 46, 0.35); }
+.thumb-top { display: flex; justify-content: space-between; font-size: 11px; font-weight: 800; color: var(--gold-600); margin-bottom: 6px; }
+.thumb-title { font-size: 13.5px; font-weight: 700; color: var(--navy-900); line-height: 1.4; }
+
+/* ---------- Print / PDF Export ---------- */
+@media print {
+  html, body { height: auto; overflow: visible; background: #fff; }
+  .deck-topbar, .progress-track, .nav-arrow, .notes-drawer, .grid-overlay { display: none !important; }
+  .stage-wrapper { height: auto; width: auto; padding: 0; display: block; }
+  .stage-scaler { width: auto; height: auto; transform: none !important; box-shadow: none; border-radius: 0; overflow: visible; }
+  .slide {
+    position: relative !important;
+    display: flex !important;
+    page-break-after: always;
+    break-after: page;
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto 16px;
+    border: 1px solid #E2E8F0;
+  }
+}

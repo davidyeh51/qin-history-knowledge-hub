@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>秦朝歷史知識庫｜麥肯錫結構化簡報 ✕ 個人與團隊史學智庫</title>
+  <meta name="description" content="專為自己與團隊成員打造的秦朝歷史知識庫：麥肯錫顧問架構 10 分鐘導讀簡報、原創 SVG 制度模型圖解、全域關鍵字即時檢索、可擴充多書架構與 Supabase 團隊共學同步。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/portal.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark">秦</div>
+        <div class="brand-text">
+          <span class="brand-title">秦朝歷史知識庫</span>
+          <span class="brand-sub">Qin Dynasty History Knowledge Hub</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="主導覽">
+        <a href="#library">典藏書庫與簡報</a>
+        <a href="#agency-lens">委託-代理診斷器</a>
+        <a href="#team-hub">團隊共學 ✕ Supabase</a>
+        <a href="docs/EXPANSION.md" target="_blank">擴充架構指南</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-search-trigger" id="top-search-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>快速檢索</span>
+          <span class="kbd">Ctrl K</span>
+        </button>
+        <button type="button" class="btn-auth" id="auth-open-btn">
+          <span class="sync-dot" id="sync-dot"></span>
+          <span id="auth-btn-label">團隊登入 / Supabase</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">
+          <span>McKINSEY STRUCTURED BRIEFING</span>
+          <span>·</span>
+          <span>自己 ✕ 團隊成員共用智庫</span>
+        </div>
+        <h1>看透「周秦之變」，讀懂中國兩千年帝制的<span>底層制度邏輯</span></h1>
+        <p class="hero-lead">
+          以麥肯錫金字塔原理與歷史政治經濟學框架，將秦漢制度史、出土簡牘與經典詮釋萃取為 10 分鐘 16:9 結構化簡報、原創向量 SVG 圖解與可持續擴充的多書知識入口，支援跨頁關鍵字即時檢索與團隊共學同步。
+        </p>
+
+        <div class="book-cta-row">
+          <a href="decks/qinhan-lectures-nie.html" class="btn-gold">
+            立即開啟旗艦簡報：《秦漢史講義》 →
+          </a>
+          <a href="#agency-lens" class="btn-search-trigger" style="padding:12px 18px;font-size:14px;">
+            開啟「委託-代理制度診斷器」
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val" id="stat-books">1<em>/ 5 席位</em></span>
+            <span class="stat-label">書庫上架 / 預留擴充</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-slides">15<em>頁</em></span>
+            <span class="stat-label">10 分鐘麥肯錫簡報</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-svgs">14+<em>張</em></span>
+            <span class="stat-label">原創 SVG 制度圖解</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-keywords">17<em>條索引</em></span>
+            <span class="stat-label">跨書精準跳頁檢索</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-card">
+        <img src="assets/images/hero-qin-zhou-transition.jpg" alt="周秦之變：從西周分封打包委託到秦制中央直管的光橋主題插畫（重新繪製）" />
+        <div class="hero-visual-caption">
+          <span><strong>周秦制度躍遷：</strong>打包委託（分封） ➔ 一竿子插到底（直管）</span>
+          <span>原創重繪視覺</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Keyword Search Panel -->
+  <section class="search-hub" aria-label="全域關鍵字檢索">
+    <div class="container">
+      <div class="search-panel">
+        <div class="search-bar-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input
+            type="search"
+            id="global-search-input"
+            class="search-input"
+            placeholder="輸入關鍵字即時跨書檢索（例：周秦之變、編戶齊民、軍功制、激勵相容、儒表法裡、集權-分權鐘擺、井田制）..."
+            autocomplete="off"
+          />
+          <button type="button" id="search-clear-btn" class="search-clear">清除</button>
+        </div>
+
+        <div class="hot-tags" id="hot-tags"></div>
+
+        <div class="search-results-box" id="search-results-box">
+          <div class="search-meta" id="search-meta"></div>
+          <div class="search-results-list" id="search-results-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books & Briefings Library -->
+  <section class="section" id="library">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">KNOWLEDGE LIBRARY · 可擴充簡報門戶</div>
+          <h2 class="section-title">秦朝歷史書籍與專題簡報庫</h2>
+        </div>
+        <div class="category-tabs" id="category-tabs" role="tablist" aria-label="書目分類篩選"></div>
+      </div>
+
+      <div id="featured-books-wrap"></div>
+      <div class="books-grid" id="planned-books-grid"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Principal-Agent Lens Tool -->
+  <section class="section tool-band" id="agency-lens">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">INSTITUTIONAL DIAGNOSTIC · 讀史致用工具</div>
+          <h2 class="section-title">「委託-代理」四維制度診斷器（歷史對照組織實戰）</h2>
+        </div>
+        <a href="decks/qinhan-lectures-nie.html#slide-14" class="btn-gold">查看簡報第 14–15 頁因果與方法論 →</a>
+      </div>
+
+      <div class="form-group" style="max-width:520px;margin-bottom:18px;">
+        <label for="pq-topic">本次診斷主題（例：跨部門專案代理鏈、業務激勵方案設計、分公司授權與集權拿捏）</label>
+        <input type="text" id="pq-topic" class="form-control" placeholder="輸入史學研究議題或團隊當前管理情境..." />
+      </div>
+
+      <div class="precheck-grid">
+        <div class="precheck-card">
+          <div class="precheck-head">
+            <div class="precheck-num">1</div>
+            <div class="precheck-q">代理鏈條｜分包（周制）vs. 直管（秦制）的訊息損耗？</div>
+          </div>
+          <textarea id="pq-1" placeholder="鏈條過長是否導致指令走樣？取消中間層後，最高委託人是否承受過高的直接監督負荷？"></textarea>
+        </div>
+
+        <div class="precheck-card">
+          <div class="precheck-head">
+            <div class="precheck-num">2</div>
+            <div class="precheck-q">激勵相容｜代理人收益是否與核心目標直接綁定？</div>
+          </div>
+          <textarea id="pq-2" placeholder="是否落入道德風險（偷懶、報喜不報憂）？有沒有設計如軍功制般的「激勵相容」機制？"></textarea>
+        </div>
+
+        <div class="precheck-card">
+          <div class="precheck-head">
+            <div class="precheck-num">3</div>
+            <div class="precheck-q">選拔機制｜「口碑品德（鄉舉）」vs.「強謹服從（以吏為師）」？</div>
+          </div>
+          <textarea id="pq-3" placeholder="目前的升遷標準會不會引發逆向選擇（只會迎合上意的人升上去，真正能幹的人被埋沒）？"></textarea>
+        </div>
+
+        <div class="precheck-card">
+          <div class="precheck-head">
+            <div class="precheck-num">4</div>
+            <div class="precheck-q">硬體與軟體｜強制監督成本 vs. 文化認同合法性配比？</div>
+          </div>
+          <textarea id="pq-4" placeholder="是否過度依賴「大棒（嚴格KPI/稽核）」推高管理成本，或忽略了「胡蘿蔔（共同價值與文化共識）」？"></textarea>
+        </div>
+      </div>
+
+      <div class="precheck-actions">
+        <span style="font-size:13px;color:#475569;">提示：完成診斷後可一鍵存入下方「團隊共學庫」，於讀書會分享交流（支援本機暫存與 Supabase 雲端同步）。</span>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span class="status-msg" id="precheck-msg" style="margin:0;"></span>
+          <button type="button" id="save-precheck-btn" class="btn-primary">一鍵儲存至共學紀錄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Practice & Supabase Sync Hub -->
+  <section class="section" id="team-hub">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">TEAM COLLABORATION · SUPABASE + RLS</div>
+          <h2 class="section-title">個人與團隊讀史共學區（行動打卡 ✕ 制度洞察）</h2>
+        </div>
+        <span class="pill pill-slate" id="sync-status-badge">偵測連線中...</span>
+      </div>
+
+      <div class="collab-grid">
+        <div style="display:grid;gap:22px;">
+          <div class="panel-card">
+            <h3 class="panel-title"><span>🎯 本期讀史落地行動清單</span></h3>
+            <div id="action-checkins-list"></div>
+          </div>
+
+          <div class="panel-card">
+            <h3 class="panel-title"><span>✍️ 新增讀史筆記 / 團隊討論</span></h3>
+            <form id="team-note-form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="note-author">署名（自己或團隊成員）</label>
+                  <input type="text" id="note-author" class="form-control" placeholder="例如：David / 團隊讀書會" />
+                </div>
+                <div class="form-group">
+                  <label for="note-category">筆記分類</label>
+                  <select id="note-category" class="form-control">
+                    <option value="制度洞察">制度洞察</option>
+                    <option value="代理成本診斷">代理成本診斷</option>
+                    <option value="史料辨析">史料辨析</option>
+                    <option value="團隊討論">團隊討論</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="note-title">標題（一句結論）</label>
+                  <input type="text" id="note-title" class="form-control" placeholder="例：漢唐商品經濟悖論給基層治理的啟示" required />
+                </div>
+                <div class="form-group">
+                  <label for="note-slide">對應簡報頁碼（選填）</label>
+                  <input type="number" id="note-slide" class="form-control" min="1" max="30" placeholder="1–15" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="note-content">洞見內容／引申討論</label>
+                <textarea id="note-content" class="form-control" rows="4" placeholder="寫下您對《秦漢史講義》或秦代制度的提問、史料對照或團隊應用心得..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">發佈筆記（雲端／本機雙軌）</button>
+              <div class="status-msg" id="note-form-msg"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="panel-card">
+          <h3 class="panel-title">
+            <span>📚 個人與團隊共學紀錄牆</span>
+            <span style="font-size:12px;font-weight:500;color:#64748B;">登入 Supabase 後跨裝置共享</span>
+          </h3>
+          <div class="notes-list" id="team-notes-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>秦朝歷史知識庫（Qin Dynasty History Knowledge Hub）</strong> · 個人與團隊共用制度史智庫
+      </div>
+      <div>
+        麥肯錫結構化萃取 ✕ 原創 SVG 圖解 ✕ GitHub Pages 靜態託管 ✕ Supabase RLS 安全架構
+      </div>
+    </div>
+  </footer>
+
+  <!-- Auth & Supabase Modal -->
+  <div class="modal-backdrop" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <h3 id="auth-modal-title">團隊成員登入 · Supabase 雲端同步</h3>
+        <button type="button" class="modal-close" id="auth-modal-close" aria-label="關閉">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="notice-box">
+          <strong>安全架構說明：</strong>本靜態網站僅使用公開 <code>publishable key</code>，並透過 PostgreSQL <strong>Row Level Security (RLS)</strong> 控管，僅限通過 Auth 登入的團隊成員存取雲端共學資料。未登入時所有資料會安全保存在瀏覽器本機 <code>localStorage</code>。
+        </div>
+
+        <div id="auth-form-box">
+          <div class="form-group">
+            <label for="auth-email">團隊成員 Email</label>
+            <input type="email" id="auth-email" class="form-control" placeholder="name@team.com" />
+          </div>
+          <div class="form-group">
+            <label for="auth-password">密碼（至少 6 碼）</label>
+            <input type="password" id="auth-password" class="form-control" placeholder="••••••" />
+          </div>
+          <div style="display:flex;gap:10px;margin-top:14px;">
+            <button type="button" id="auth-login-submit" class="btn-primary" style="flex:1;justify-content:center;">登入雲端</button>
+            <button type="button" id="auth-signup-submit" class="btn-gold" style="flex:1;justify-content:center;">註冊新成員</button>
+          </div>
+        </div>
+
+        <div id="auth-logged-in-box" style="display:none;">
+          <p style="margin:0 0 14px;font-size:14px;">目前登入帳號：<strong id="auth-user-email"></strong></p>
+          <button type="button" id="auth-logout-btn" class="btn-primary" style="background:#B91C1C;width:100%;justify-content:center;">登出帳號</button>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #E2E8F0;margin:18px 0;" />
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+          <span style="font-size:12px;color:#64748B;">尚未在 Supabase 建表？點擊右側複製 RLS 腳本</span>
+          <button type="button" id="copy-sql-btn" class="hot-chip" style="font-weight:700;">複製 schema.sql</button>
+        </div>
+        <div class="status-msg" id="auth-msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JS SDK v2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-sync.js"></script>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>
